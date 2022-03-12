@@ -53,7 +53,7 @@ public class Principal extends javax.swing.JFrame {
 
         jToolBar1.setRollover(true);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/3.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Carro1.png"))); // NOI18N
         jButton1.setFocusable(false);
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -64,7 +64,7 @@ public class Principal extends javax.swing.JFrame {
         });
         jToolBar1.add(jButton1);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/2.png"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Personal venta.png"))); // NOI18N
         jButton2.setFocusable(false);
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -75,7 +75,7 @@ public class Principal extends javax.swing.JFrame {
         });
         jToolBar1.add(jButton2);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/1.png"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Venta.png"))); // NOI18N
         jButton3.setFocusable(false);
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -99,12 +99,12 @@ public class Principal extends javax.swing.JFrame {
         );
         escritorioLayout.setVerticalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 235, Short.MAX_VALUE)
+            .addGap(0, 219, Short.MAX_VALUE)
         );
 
         jMenu1.setText("Adicionar");
 
-        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/3.png"))); // NOI18N
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Carro1.png"))); // NOI18N
         jMenuItem1.setText("Carro");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -113,7 +113,7 @@ public class Principal extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem1);
 
-        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/2.png"))); // NOI18N
+        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Personal venta.png"))); // NOI18N
         jMenuItem2.setText("Personal");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,7 +122,7 @@ public class Principal extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem2);
 
-        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/1.png"))); // NOI18N
+        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Venta.png"))); // NOI18N
         jMenuItem3.setText("Ventas");
         jMenu1.add(jMenuItem3);
 
@@ -130,9 +130,11 @@ public class Principal extends javax.swing.JFrame {
 
         jMenu2.setText("Eliminar");
 
+        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Carro1.png"))); // NOI18N
         jMenuItem4.setText("Carro");
         jMenu2.add(jMenuItem4);
 
+        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Personal venta.png"))); // NOI18N
         jMenuItem5.setText("Personal");
         jMenu2.add(jMenuItem5);
 
@@ -140,6 +142,7 @@ public class Principal extends javax.swing.JFrame {
 
         jMenu3.setText("Listar");
 
+        jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Carro1.png"))); // NOI18N
         jMenuItem6.setText("Carros");
         jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,9 +151,11 @@ public class Principal extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem6);
 
+        jMenuItem7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Personal venta.png"))); // NOI18N
         jMenuItem7.setText("Personal");
         jMenu3.add(jMenuItem7);
 
+        jMenuItem8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Venta.png"))); // NOI18N
         jMenuItem8.setText("Ventas");
         jMenu3.add(jMenuItem8);
 
@@ -168,7 +173,7 @@ public class Principal extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(escritorio))
         );
