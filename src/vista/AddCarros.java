@@ -174,11 +174,8 @@ public class AddCarros extends javax.swing.JPanel {
         String marca = comboMarca.getName();
         String modelo = textModelo.getText();
         String color = textColor.getText();
-        String codigo = textColor.getText();
+        String codigo = textCodigo.getText();
         
-        
-
-
         Consecionario.listaCarros.add(new Carros(precio, marca, modelo, color, codigo));
 
         textPrecio.setText("");

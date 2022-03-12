@@ -180,14 +180,19 @@ public class MostrarCarros extends javax.swing.JPanel {
                 mostrarCodigo.setText(carro.getCodigo());
                 mostrarColor.setText(carro.getColor());
                 mostrarModelo.setText(carro.getModelo());
+                mostrarMarca.setText(carro.getMarca());
                 mostrarPrecio.setText("" + carro.getPrecio());
                 bandera = true;
+                System.out.println("FUNCIONA");
+            } else {
+                System.out.println("NO FUNCIONA");
+                System.out.println(carro.getCodigo());
             }
         }
-        if (bandera = true) {
+        if (bandera == true) {
             mensajeAlerta("Auto Encontrado","MOSTRAR AUTOS");
         }else{
-            mensajeAlerta("ERROR","MOSTRAR AUTOS");
+            mensajeAlerta("ERROR, Auto no Encontrado","MOSTRAR AUTOS");
         }
         
     }//GEN-LAST:event_buscarCodigoButtonActionPerformed
