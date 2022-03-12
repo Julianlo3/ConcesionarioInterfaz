@@ -172,6 +172,7 @@ public class MostrarCarros extends javax.swing.JPanel {
     private void buscarCodigoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarCodigoButtonActionPerformed
         // TODO add your handling code here:
         boolean bandera = false;
+        
         String codigoString = buscarCodigoCarroTextField.getText();
 
         for (Carros carro : Consecionario.listaCarros) {
