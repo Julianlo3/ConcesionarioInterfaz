@@ -9,14 +9,14 @@ package control;
  * @author Elkin
  */
 public class Carros {
-    
+
     double precio;
     String marca;
     String modelo;
     String color;
     String codigo;
 
-    public Carros(double precio, String marca, String modelo, String color,String codigo) {
+    public Carros(double precio, String marca, String modelo, String color, String codigo) {
         this.precio = precio;
         this.marca = marca;
         this.modelo = modelo;
@@ -66,6 +66,12 @@ public class Carros {
     public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
-    
-    
+
+    public String getDatos() {
+        return "Precio: " +codigo
+                + "Marca: " +marca
+                + "Modelo: " +modelo
+                + "Color: " +color
+                + "Precio: " +precio;
+    }
 }

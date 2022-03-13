@@ -4,7 +4,11 @@
  */
 package vista;
 
+import control.Carros;
+import control.Consecionario;
 import control.ReturnViews;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -12,14 +16,15 @@ import control.ReturnViews;
  */
 public class Principal extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Principal
-     */
+    private DefaultTableModel modelo;
+    
     public Principal() {
         initComponents();
         this.setExtendedState(MAXIMIZED_BOTH);
          nombreConce.requestFocus();
         nombreConce.selectAll();
+        listarCarros.pack();
+        listarCarros.setLocationRelativeTo(null);
     }
 
     /**
@@ -31,6 +36,27 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        listarCarros = new javax.swing.JFrame();
+        jLabel2 = new javax.swing.JLabel();
+        eliminarAutoTextField = new javax.swing.JTextField();
+        eliminarButton = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tablaDatos = new javax.swing.JTable();
+        jLabel3 = new javax.swing.JLabel();
+        cantidadAutos = new javax.swing.JTextField();
+        AddCarros = new javax.swing.JFrame();
+        jLabel4 = new javax.swing.JLabel();
+        textColor = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        textModelo = new javax.swing.JTextField();
+        atrasButton = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        textCodigo = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        textPrecio = new javax.swing.JTextField();
+        comboMarca = new javax.swing.JComboBox<>();
+        agregarButton = new javax.swing.JButton();
         jToolBar1 = new javax.swing.JToolBar();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -55,6 +81,198 @@ public class Principal extends javax.swing.JFrame {
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
+
+        listarCarros.setResizable(false);
+
+        jLabel2.setText("Digite el Codigo del Auto a Eliminar:");
+
+        eliminarButton.setText("ELIMMINAR AUTO");
+        eliminarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eliminarButtonActionPerformed(evt);
+            }
+        });
+
+        tablaDatos.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Código", "Marca", "Modelo", "Color", "Precio"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tablaDatos.getTableHeader().setReorderingAllowed(false);
+        jScrollPane1.setViewportView(tablaDatos);
+
+        jLabel3.setText("Cantidad de Autos:");
+
+        javax.swing.GroupLayout listarCarrosLayout = new javax.swing.GroupLayout(listarCarros.getContentPane());
+        listarCarros.getContentPane().setLayout(listarCarrosLayout);
+        listarCarrosLayout.setHorizontalGroup(
+            listarCarrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(listarCarrosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(eliminarAutoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(eliminarButton)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, listarCarrosLayout.createSequentialGroup()
+                .addContainerGap(22, Short.MAX_VALUE)
+                .addGroup(listarCarrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(listarCarrosLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(cantidadAutos, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 737, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(16, 16, 16))
+        );
+        listarCarrosLayout.setVerticalGroup(
+            listarCarrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(listarCarrosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(listarCarrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(eliminarAutoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eliminarButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(listarCarrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(cantidadAutos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(84, Short.MAX_VALUE))
+        );
+
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel4.setText("Color:");
+
+        textColor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textColorActionPerformed(evt);
+            }
+        });
+
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel5.setText("Modelo:");
+
+        textModelo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textModeloActionPerformed(evt);
+            }
+        });
+
+        atrasButton.setText("Atras");
+        atrasButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                atrasButtonActionPerformed(evt);
+            }
+        });
+
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel6.setText("Código:");
+
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel7.setText("Marca:");
+
+        textCodigo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textCodigoActionPerformed(evt);
+            }
+        });
+
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel8.setText("Precio:");
+
+        textPrecio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textPrecioActionPerformed(evt);
+            }
+        });
+
+        comboMarca.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mazda", "Chevrolet", "Camaro", "Ferrari", "Corsa", "Hyundai", " " }));
+        comboMarca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboMarcaActionPerformed(evt);
+            }
+        });
+
+        agregarButton.setText("Agregar");
+        agregarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                agregarButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout AddCarrosLayout = new javax.swing.GroupLayout(AddCarros.getContentPane());
+        AddCarros.getContentPane().setLayout(AddCarrosLayout);
+        AddCarrosLayout.setHorizontalGroup(
+            AddCarrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AddCarrosLayout.createSequentialGroup()
+                .addGroup(AddCarrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(AddCarrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(AddCarrosLayout.createSequentialGroup()
+                        .addComponent(agregarButton)
+                        .addGap(31, 31, 31)
+                        .addComponent(atrasButton)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(comboMarca, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(textColor)
+                    .addComponent(textPrecio)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AddCarrosLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(textModelo, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textCodigo))
+                .addContainerGap())
+        );
+        AddCarrosLayout.setVerticalGroup(
+            AddCarrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AddCarrosLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addGroup(AddCarrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(comboMarca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7))
+                .addGap(18, 18, 18)
+                .addGroup(AddCarrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel8)
+                    .addComponent(textPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(AddCarrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(textColor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addGap(21, 21, 21)
+                .addGroup(AddCarrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(textModelo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                .addGroup(AddCarrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(textCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(AddCarrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(agregarButton)
+                    .addComponent(atrasButton))
+                .addGap(27, 27, 27))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -255,7 +473,9 @@ public class Principal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    public static void mensajeAlerta(String mensaje, String Alerta) {
+        JOptionPane.showMessageDialog(null, mensaje, Alerta, JOptionPane.INFORMATION_MESSAGE);
+    }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         this.escritorio.add(retornoVistas.returnInternal(new AddCarros(), "Adicionar Carros"));
@@ -263,7 +483,7 @@ public class Principal extends javax.swing.JFrame {
 
     private void jMenuCarroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuCarroActionPerformed
         // TODO add your handling code here:
-        this.escritorio.add(retornoVistas.returnInternal(new AddCarros(), "Adicionar Carros"));
+         AddCarros.setVisible(true);
     }//GEN-LAST:event_jMenuCarroActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -275,15 +495,12 @@ public class Principal extends javax.swing.JFrame {
         this.escritorio.add(retornoVistas.returnInternal(new AddPersonal(), "Adicionar Personal"));
         
         
-        
-        
-        
  
     }//GEN-LAST:event_jMenuPersonalActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         // TODO add your handling code here:
-        this.escritorio.add(retornoVistas.returnInternal(new MostrarCarros(), "Mostrar Carros"));
+        listarCarros.setVisible(true);
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void nombreConceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreConceActionPerformed
@@ -297,6 +514,86 @@ public class Principal extends javax.swing.JFrame {
         nombreConce.requestFocus();
        nombreConce.selectAll();
     }//GEN-LAST:event_jButtonNombreConceActionPerformed
+
+    private void listarCarros(){
+        modelo = (DefaultTableModel) tablaDatos.getModel() ;
+        Carros carro = new Carros();
+        
+        int filas = modelo.getRowCount();
+        for(int i=0;i<filas;i++){
+            modelo.removeRow(0);
+        }
+        
+        for(int i=0;i<Consecionario.listaCarros.size();i++){
+            carro = Consecionario.listaCarros.get(i);
+            modelo.addRow(new Object[]{carro.getCodigo(),carro.getMarca(),carro.getModelo(),carro.getColor(),carro.getPrecio()});
+        }
+        
+    }
+    
+    private void eliminarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarButtonActionPerformed
+        // TODO add your handling code here:}
+        boolean bandera = false;
+        String ruta = eliminarAutoTextField.getText();
+        for (Carros carro : Consecionario.listaCarros) {
+            if (carro.getCodigo().equals(ruta)) {
+                bandera = true;
+                System.out.println("FUNCIONA");
+            } else {
+                System.out.println("NO FUNCIONA");
+                System.out.println(carro.getCodigo());
+            }
+        }
+        if (bandera == true) {
+            mensajeAlerta("Auto Encontrado","MOSTRAR AUTOS");
+            Consecionario.listaCarros.remove(ruta);
+        }else{
+            mensajeAlerta("ERROR, Auto no Encontrado","MOSTRAR AUTOS");
+        }
+    }//GEN-LAST:event_eliminarButtonActionPerformed
+
+    private void textColorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textColorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textColorActionPerformed
+
+    private void textModeloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textModeloActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textModeloActionPerformed
+
+    private void atrasButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atrasButtonActionPerformed
+
+    }//GEN-LAST:event_atrasButtonActionPerformed
+
+    private void textCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textCodigoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textCodigoActionPerformed
+
+    private void textPrecioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textPrecioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textPrecioActionPerformed
+
+    private void comboMarcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboMarcaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboMarcaActionPerformed
+
+    private void agregarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarButtonActionPerformed
+
+        double precio = Double.parseDouble(textPrecio.getText());
+        String marca = comboMarca.getSelectedItem().toString();
+        String modeloC = textModelo.getText();
+        String color = textColor.getText();
+        String codigo = textCodigo.getText();
+
+        Consecionario.listaCarros.add(new Carros(precio, marca, modeloC, color, codigo));
+
+        textPrecio.setText("");
+        textModelo.setText("");
+        textColor.setText("");
+        textCodigo.setText("");
+
+        mensajeAlerta("Nuevo Auto Agregado", "Agregar Carros");
+        listarCarros();
+    }//GEN-LAST:event_agregarButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -334,6 +631,13 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JFrame AddCarros;
+    private javax.swing.JButton agregarButton;
+    private javax.swing.JButton atrasButton;
+    private javax.swing.JTextField cantidadAutos;
+    private javax.swing.JComboBox<String> comboMarca;
+    private javax.swing.JTextField eliminarAutoTextField;
+    private javax.swing.JButton eliminarButton;
     private javax.swing.JDesktopPane escritorio;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -341,6 +645,13 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButtonNombreConce;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabelNombreInicio;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
@@ -355,9 +666,16 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuPersonal;
     private javax.swing.JMenuItem jMenuVentas;
     private javax.swing.JPanel jPanelFondoInicio;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JToolBar.Separator jSeparator1;
     private javax.swing.JToolBar jToolBar1;
+    private javax.swing.JFrame listarCarros;
     private javax.swing.JTextField nombreConce;
+    private javax.swing.JTable tablaDatos;
+    private javax.swing.JTextField textCodigo;
+    private javax.swing.JTextField textColor;
+    private javax.swing.JTextField textModelo;
+    private javax.swing.JTextField textPrecio;
     // End of variables declaration//GEN-END:variables
     ReturnViews retornoVistas = new ReturnViews();
 }
