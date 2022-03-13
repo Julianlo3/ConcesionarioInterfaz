@@ -18,6 +18,8 @@ public class Principal extends javax.swing.JFrame {
     public Principal() {
         initComponents();
         this.setExtendedState(MAXIMIZED_BOTH);
+         nombreConce.requestFocus();
+        nombreConce.selectAll();
     }
 
     /**
@@ -36,11 +38,16 @@ public class Principal extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JToolBar.Separator();
         jButton4 = new javax.swing.JButton();
         escritorio = new javax.swing.JDesktopPane();
+        jPanelFondoInicio = new javax.swing.JPanel();
+        jLabelNombreInicio = new javax.swing.JLabel();
+        nombreConce = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jButtonNombreConce = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuCarro = new javax.swing.JMenuItem();
+        jMenuPersonal = new javax.swing.JMenuItem();
+        jMenuVentas = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
@@ -49,8 +56,9 @@ public class Principal extends javax.swing.JFrame {
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
+        jToolBar1.setBackground(new java.awt.Color(255, 251, 233));
         jToolBar1.setRollover(true);
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Carro1.png"))); // NOI18N
@@ -91,40 +99,107 @@ public class Principal extends javax.swing.JFrame {
         escritorio.setBackground(new java.awt.Color(102, 102, 102));
         escritorio.setForeground(new java.awt.Color(0, 51, 255));
 
+        jPanelFondoInicio.setBackground(new java.awt.Color(53, 92, 125));
+
+        jLabelNombreInicio.setFont(new java.awt.Font("Bauhaus 93", 0, 48)); // NOI18N
+        jLabelNombreInicio.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelNombreInicio.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelNombreInicio.setText("Nombre del concesionario");
+        jLabelNombreInicio.setToolTipText("");
+
+        nombreConce.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        nombreConce.setForeground(new java.awt.Color(204, 204, 204));
+        nombreConce.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        nombreConce.setText("Ingrese el nombre del concesionario...");
+        nombreConce.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nombreConceActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Rueda.png"))); // NOI18N
+
+        jButtonNombreConce.setText("OK");
+        jButtonNombreConce.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonNombreConceActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanelFondoInicioLayout = new javax.swing.GroupLayout(jPanelFondoInicio);
+        jPanelFondoInicio.setLayout(jPanelFondoInicioLayout);
+        jPanelFondoInicioLayout.setHorizontalGroup(
+            jPanelFondoInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelFondoInicioLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelFondoInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelFondoInicioLayout.createSequentialGroup()
+                        .addComponent(jLabelNombreInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(jPanelFondoInicioLayout.createSequentialGroup()
+                        .addGap(358, 358, 358)
+                        .addComponent(nombreConce, javax.swing.GroupLayout.DEFAULT_SIZE, 469, Short.MAX_VALUE)
+                        .addGap(333, 333, 333))))
+            .addGroup(jPanelFondoInicioLayout.createSequentialGroup()
+                .addGap(525, 525, 525)
+                .addComponent(jButtonNombreConce, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(544, 544, 544))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelFondoInicioLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanelFondoInicioLayout.setVerticalGroup(
+            jPanelFondoInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelFondoInicioLayout.createSequentialGroup()
+                .addGap(88, 88, 88)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelNombreInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(nombreConce)
+                .addGap(35, 35, 35)
+                .addComponent(jButtonNombreConce, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
+                .addGap(323, 323, 323))
+        );
+
+        escritorio.setLayer(jPanelFondoInicio, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
         javax.swing.GroupLayout escritorioLayout = new javax.swing.GroupLayout(escritorio);
         escritorio.setLayout(escritorioLayout);
         escritorioLayout.setHorizontalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanelFondoInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         escritorioLayout.setVerticalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 219, Short.MAX_VALUE)
+            .addComponent(jPanelFondoInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jMenu1.setText("Adicionar");
 
-        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Carro1.png"))); // NOI18N
-        jMenuItem1.setText("Carro");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        jMenuCarro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Carro1.png"))); // NOI18N
+        jMenuCarro.setText("Carro");
+        jMenuCarro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                jMenuCarroActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem1);
+        jMenu1.add(jMenuCarro);
 
-        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Personal venta.png"))); // NOI18N
-        jMenuItem2.setText("Personal");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        jMenuPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Personal venta.png"))); // NOI18N
+        jMenuPersonal.setText("Personal");
+        jMenuPersonal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                jMenuPersonalActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem2);
+        jMenu1.add(jMenuPersonal);
 
-        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Venta.png"))); // NOI18N
-        jMenuItem3.setText("Ventas");
-        jMenu1.add(jMenuItem3);
+        jMenuVentas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Venta.png"))); // NOI18N
+        jMenuVentas.setText("Ventas");
+        jMenu1.add(jMenuVentas);
 
         jMenuBar1.add(jMenu1);
 
@@ -167,7 +242,7 @@ public class Principal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+            .addComponent(jToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 1166, Short.MAX_VALUE)
             .addComponent(escritorio)
         );
         layout.setVerticalGroup(
@@ -186,25 +261,42 @@ public class Principal extends javax.swing.JFrame {
         this.escritorio.add(retornoVistas.returnInternal(new AddCarros(), "Adicionar Carros"));
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void jMenuCarroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuCarroActionPerformed
         // TODO add your handling code here:
         this.escritorio.add(retornoVistas.returnInternal(new AddCarros(), "Adicionar Carros"));
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_jMenuCarroActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        // TODO add your handling code here:
+    private void jMenuPersonalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuPersonalActionPerformed
+        this.escritorio.add(retornoVistas.returnInternal(new AddPersonal(), "Adicionar Personal"));
         
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+        
+        
+        
+        
+ 
+    }//GEN-LAST:event_jMenuPersonalActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         // TODO add your handling code here:
         this.escritorio.add(retornoVistas.returnInternal(new MostrarCarros(), "Mostrar Carros"));
     }//GEN-LAST:event_jMenuItem6ActionPerformed
+
+    private void nombreConceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreConceActionPerformed
+       nombreConce.requestFocus();
+       nombreConce.selectAll();
+       
+       
+    }//GEN-LAST:event_nombreConceActionPerformed
+
+    private void jButtonNombreConceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNombreConceActionPerformed
+        nombreConce.requestFocus();
+       nombreConce.selectAll();
+    }//GEN-LAST:event_jButtonNombreConceActionPerformed
 
     /**
      * @param args the command line arguments
@@ -247,20 +339,25 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButtonNombreConce;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabelNombreInicio;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuCarro;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
+    private javax.swing.JMenuItem jMenuPersonal;
+    private javax.swing.JMenuItem jMenuVentas;
+    private javax.swing.JPanel jPanelFondoInicio;
     private javax.swing.JToolBar.Separator jSeparator1;
     private javax.swing.JToolBar jToolBar1;
+    private javax.swing.JTextField nombreConce;
     // End of variables declaration//GEN-END:variables
     ReturnViews retornoVistas = new ReturnViews();
 }

@@ -49,7 +49,20 @@ public class Consecionario {
         listaCarros.add(carro);
     }
     
+    //--------------------------------------------------------------------------
+    public static ArrayList<PersonalVentas> listaPersonas = new ArrayList<>();
     
+     public ArrayList<PersonalVentas> getPersonalVentas() {
+        return listaPersonas;
+    }
+
+    public void setListaPersonas(ArrayList<PersonalVentas> listaPersonalVentas) {
+        Consecionario.listaPersonas = listaPersonalVentas;
+    }
+   
+    public void addPersonal(PersonalVentas personal) {
+        listaPersonas.add(personal);
+    }
     
     
 }

@@ -4,16 +4,19 @@
  */
 package vista;
 
-import control.Consecionario;
 import control.Carros;
-import javax.swing.JOptionPane;
+import control.Consecionario;
+import static vista.MostrarCarros.mensajeAlerta;
 
 /**
  *
- * @author Elkin
+ * @author lopez
  */
 public class AddCarros extends javax.swing.JPanel {
 
+    /**
+     * Creates new form AddCarros1
+     */
     public AddCarros() {
         initComponents();
     }
@@ -27,21 +30,48 @@ public class AddCarros extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        textColor = new javax.swing.JTextField();
+        ImagenAgregarCarro = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        textModelo = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        textCodigo = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         textPrecio = new javax.swing.JTextField();
         comboMarca = new javax.swing.JComboBox<>();
         agregarButton = new javax.swing.JButton();
+        TituloAgregarCarro = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        textColor = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        textModelo = new javax.swing.JTextField();
-        atrasButton = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        textCodigo = new javax.swing.JTextField();
+
+        textColor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textColorActionPerformed(evt);
+            }
+        });
+
+        ImagenAgregarCarro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/AgregarCarro.png"))); // NOI18N
+
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel4.setText("Modelo:");
+
+        textModelo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textModeloActionPerformed(evt);
+            }
+        });
+
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel5.setText("Código:");
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel1.setText("Marca:");
+
+        textCodigo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textCodigoActionPerformed(evt);
+            }
+        });
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel2.setText("Precio:");
@@ -59,6 +89,8 @@ public class AddCarros extends javax.swing.JPanel {
             }
         });
 
+        agregarButton.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        agregarButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/mas.png"))); // NOI18N
         agregarButton.setText("Agregar");
         agregarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -66,76 +98,65 @@ public class AddCarros extends javax.swing.JPanel {
             }
         });
 
+        TituloAgregarCarro.setEditable(false);
+        TituloAgregarCarro.setFont(new java.awt.Font("Arial Black", 0, 24)); // NOI18N
+        TituloAgregarCarro.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        TituloAgregarCarro.setText("Agregar carros");
+        TituloAgregarCarro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TituloAgregarCarroActionPerformed(evt);
+            }
+        });
+
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setText("Color:");
-
-        textColor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textColorActionPerformed(evt);
-            }
-        });
-
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel4.setText("Modelo:");
-
-        textModelo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textModeloActionPerformed(evt);
-            }
-        });
-
-        atrasButton.setText("Atras");
-        atrasButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                atrasButtonActionPerformed(evt);
-            }
-        });
-
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel5.setText("Código:");
-
-        textCodigo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textCodigoActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(agregarButton)
-                        .addGap(31, 31, 31)
-                        .addComponent(atrasButton)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(comboMarca, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(textColor)
-                    .addComponent(textPrecio)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 2, Short.MAX_VALUE)
-                        .addComponent(textModelo, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(textCodigo))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(comboMarca, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(textCodigo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 339, Short.MAX_VALUE)
+                                    .addComponent(textColor, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(textPrecio, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(textModelo, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addGap(65, 65, 65)
+                                        .addComponent(agregarButton)))
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(196, 196, 196)
+                        .addComponent(ImagenAgregarCarro)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(TituloAgregarCarro))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addContainerGap()
+                .addComponent(TituloAgregarCarro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ImagenAgregarCarro, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(comboMarca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(textPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
@@ -146,20 +167,28 @@ public class AddCarros extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(textModelo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(textCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(agregarButton)
-                    .addComponent(atrasButton))
+                .addComponent(agregarButton)
                 .addGap(27, 27, 27))
         );
     }// </editor-fold>//GEN-END:initComponents
-    public static void mensajeAlerta(String mensaje, String Agregar) {
-        JOptionPane.showMessageDialog(null, mensaje, Agregar, JOptionPane.INFORMATION_MESSAGE);
-    }
+
+    private void textColorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textColorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textColorActionPerformed
+
+    private void textModeloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textModeloActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textModeloActionPerformed
+
+    private void textCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textCodigoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textCodigoActionPerformed
+
     private void textPrecioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textPrecioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textPrecioActionPerformed
@@ -171,11 +200,11 @@ public class AddCarros extends javax.swing.JPanel {
     private void agregarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarButtonActionPerformed
 
         double precio = Double.parseDouble(textPrecio.getText());
-        String marca = comboMarca.getName();
+        String marca = comboMarca.getSelectedItem().toString();
         String modelo = textModelo.getText();
         String color = textColor.getText();
         String codigo = textCodigo.getText();
-        
+
         Consecionario.listaCarros.add(new Carros(precio, marca, modelo, color, codigo));
 
         textPrecio.setText("");
@@ -186,26 +215,15 @@ public class AddCarros extends javax.swing.JPanel {
         mensajeAlerta("Nuevo Auto Agregado", "Agregar Carros");
     }//GEN-LAST:event_agregarButtonActionPerformed
 
-    private void textColorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textColorActionPerformed
+    private void TituloAgregarCarroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TituloAgregarCarroActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textColorActionPerformed
-
-    private void textModeloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textModeloActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textModeloActionPerformed
-
-    private void atrasButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atrasButtonActionPerformed
-
-    }//GEN-LAST:event_atrasButtonActionPerformed
-
-    private void textCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textCodigoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textCodigoActionPerformed
+    }//GEN-LAST:event_TituloAgregarCarroActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel ImagenAgregarCarro;
+    private javax.swing.JTextField TituloAgregarCarro;
     private javax.swing.JButton agregarButton;
-    private javax.swing.JButton atrasButton;
     private javax.swing.JComboBox<String> comboMarca;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
