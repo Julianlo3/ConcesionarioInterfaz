@@ -25,6 +25,8 @@ public class Principal extends javax.swing.JFrame {
         nombreConce.selectAll();
         listarCarros.pack();
         listarCarros.setLocationRelativeTo(null);
+        AddCarros.pack();
+        AddCarros.setLocationRelativeTo(null);
     }
 
     /**
@@ -57,6 +59,8 @@ public class Principal extends javax.swing.JFrame {
         textPrecio = new javax.swing.JTextField();
         comboMarca = new javax.swing.JComboBox<>();
         agregarButton = new javax.swing.JButton();
+        ImagenAddcarro = new javax.swing.JLabel();
+        AddCarroTitulo = new javax.swing.JLabel();
         jToolBar1 = new javax.swing.JToolBar();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -175,6 +179,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        atrasButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/atras.png"))); // NOI18N
         atrasButton.setText("Atras");
         atrasButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -210,12 +215,20 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        agregarButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/mas.png"))); // NOI18N
         agregarButton.setText("Agregar");
         agregarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 agregarButtonActionPerformed(evt);
             }
         });
+
+        ImagenAddcarro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/AgregarCarro.png"))); // NOI18N
+
+        AddCarroTitulo.setFont(new java.awt.Font("Bauhaus 93", 0, 48)); // NOI18N
+        AddCarroTitulo.setForeground(java.awt.Color.blue);
+        AddCarroTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        AddCarroTitulo.setText("Agregar Carro");
 
         javax.swing.GroupLayout AddCarrosLayout = new javax.swing.GroupLayout(AddCarros.getContentPane());
         AddCarros.getContentPane().setLayout(AddCarrosLayout);
@@ -238,16 +251,26 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(comboMarca, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(textColor)
                     .addComponent(textPrecio)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AddCarrosLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(textModelo, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(textCodigo))
+                    .addComponent(textCodigo)
+                    .addComponent(textModelo, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AddCarrosLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(AddCarrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AddCarrosLayout.createSequentialGroup()
+                        .addComponent(ImagenAddcarro)
+                        .addGap(166, 166, 166))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AddCarrosLayout.createSequentialGroup()
+                        .addComponent(AddCarroTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 508, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
         AddCarrosLayout.setVerticalGroup(
             AddCarrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AddCarrosLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addComponent(AddCarroTitulo)
+                .addGap(26, 26, 26)
+                .addComponent(ImagenAddcarro, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(AddCarrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(comboMarca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
@@ -263,7 +286,7 @@ public class Principal extends javax.swing.JFrame {
                 .addGroup(AddCarrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(textModelo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(AddCarrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(textCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -477,8 +500,8 @@ public class Principal extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, mensaje, Alerta, JOptionPane.INFORMATION_MESSAGE);
     }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        this.escritorio.add(retornoVistas.returnInternal(new AddCarros(), "Adicionar Carros"));
+
+  AddCarros.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jMenuCarroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuCarroActionPerformed
@@ -502,18 +525,6 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
         listarCarros.setVisible(true);
     }//GEN-LAST:event_jMenuItem6ActionPerformed
-
-    private void nombreConceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreConceActionPerformed
-       nombreConce.requestFocus();
-       nombreConce.selectAll();
-       
-       
-    }//GEN-LAST:event_nombreConceActionPerformed
-
-    private void jButtonNombreConceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNombreConceActionPerformed
-        nombreConce.requestFocus();
-       nombreConce.selectAll();
-    }//GEN-LAST:event_jButtonNombreConceActionPerformed
 
     private void listarCarros(){
         modelo = (DefaultTableModel) tablaDatos.getModel() ;
@@ -561,7 +572,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_textModeloActionPerformed
 
     private void atrasButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atrasButtonActionPerformed
-
+        dispose();
     }//GEN-LAST:event_atrasButtonActionPerformed
 
     private void textCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textCodigoActionPerformed
@@ -594,6 +605,16 @@ public class Principal extends javax.swing.JFrame {
         mensajeAlerta("Nuevo Auto Agregado", "Agregar Carros");
         listarCarros();
     }//GEN-LAST:event_agregarButtonActionPerformed
+
+    private void jButtonNombreConceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNombreConceActionPerformed
+        nombreConce.requestFocus();
+        nombreConce.selectAll();
+        jPanelFondoInicio.setVisible(false);
+    }//GEN-LAST:event_jButtonNombreConceActionPerformed
+
+    private void nombreConceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreConceActionPerformed
+
+    }//GEN-LAST:event_nombreConceActionPerformed
 
     /**
      * @param args the command line arguments
@@ -631,7 +652,9 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel AddCarroTitulo;
     private javax.swing.JFrame AddCarros;
+    private javax.swing.JLabel ImagenAddcarro;
     private javax.swing.JButton agregarButton;
     private javax.swing.JButton atrasButton;
     private javax.swing.JTextField cantidadAutos;
