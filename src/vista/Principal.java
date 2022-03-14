@@ -15,14 +15,15 @@ import javax.swing.table.DefaultTableModel;
  * @author Elkin
  */
 public class Principal extends javax.swing.JFrame {
-
+  Consecionario concesionario = new Consecionario();
     private DefaultTableModel modelo;
-    
     public Principal() {
         initComponents();
+        Contenedor.add(MenuInicio);
+        MenuInicio.setVisible(true);
+        CampoNombreConcesionario1.requestFocus();
+        CampoNombreConcesionario1.selectAll();
         this.setExtendedState(MAXIMIZED_BOTH);
-         nombreConce.requestFocus();
-        nombreConce.selectAll();
         listarCarros.pack();
         listarCarros.setLocationRelativeTo(null);
         AddCarros.pack();
@@ -37,6 +38,7 @@ public class Principal extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
         listarCarros = new javax.swing.JFrame();
         jLabel2 = new javax.swing.JLabel();
@@ -61,6 +63,29 @@ public class Principal extends javax.swing.JFrame {
         agregarButton = new javax.swing.JButton();
         ImagenAddcarro = new javax.swing.JLabel();
         AddCarroTitulo = new javax.swing.JLabel();
+        MenuInicio = new javax.swing.JPanel();
+        TituloConce = new javax.swing.JLabel();
+        Rueda = new javax.swing.JLabel();
+        Gerente = new javax.swing.JLabel();
+        CampoNombreGerente = new javax.swing.JTextField();
+        CampoNombreConcesionario1 = new javax.swing.JTextField();
+        EnviarInformacion = new javax.swing.JButton();
+        MenuPrincipal = new javax.swing.JPanel();
+        Encabezado = new javax.swing.JPanel();
+        TituloNombreConce = new javax.swing.JLabel();
+        TituloNombreGerente = new javax.swing.JLabel();
+        TablaInicio = new javax.swing.JTabbedPane();
+        TablaBienvenida = new javax.swing.JTabbedPane();
+        TablaInicioBienvenida = new javax.swing.JPanel();
+        BienvenidaInicio = new javax.swing.JLabel();
+        TituloNombreConce1 = new javax.swing.JLabel();
+        Sonrisa = new javax.swing.JLabel();
+        TablaCarros = new javax.swing.JTabbedPane();
+        TablaCarrosMenu = new javax.swing.JPanel();
+        CarroLogo = new javax.swing.JLabel();
+        TablaPersonalVentas = new javax.swing.JTabbedPane();
+        TablaVentas = new javax.swing.JTabbedPane();
+        TablaConfiguracion = new javax.swing.JTabbedPane();
         jToolBar1 = new javax.swing.JToolBar();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -68,11 +93,7 @@ public class Principal extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JToolBar.Separator();
         jButton4 = new javax.swing.JButton();
         escritorio = new javax.swing.JDesktopPane();
-        jPanelFondoInicio = new javax.swing.JPanel();
-        jLabelNombreInicio = new javax.swing.JLabel();
-        nombreConce = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jButtonNombreConce = new javax.swing.JButton();
+        Contenedor = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuCarro = new javax.swing.JMenuItem();
@@ -297,6 +318,222 @@ public class Principal extends javax.swing.JFrame {
                 .addGap(27, 27, 27))
         );
 
+        MenuInicio.setBackground(new java.awt.Color(73, 83, 113));
+        MenuInicio.setLayout(new java.awt.GridBagLayout());
+
+        TituloConce.setFont(new java.awt.Font("Bauhaus 93", 0, 36)); // NOI18N
+        TituloConce.setForeground(new java.awt.Color(255, 255, 255));
+        TituloConce.setText("Ingrese el nombre del concesionario");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(12, 257, 0, 0);
+        MenuInicio.add(TituloConce, gridBagConstraints);
+
+        Rueda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Rueda.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(26, 449, 0, 0);
+        MenuInicio.add(Rueda, gridBagConstraints);
+
+        Gerente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Gerente.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(2, 487, 0, 0);
+        MenuInicio.add(Gerente, gridBagConstraints);
+
+        CampoNombreGerente.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        CampoNombreGerente.setForeground(new java.awt.Color(204, 204, 204));
+        CampoNombreGerente.setText("Nombre del concesionario...");
+        CampoNombreGerente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CampoNombreGerenteActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.ipadx = 565;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 257, 0, 0);
+        MenuInicio.add(CampoNombreGerente, gridBagConstraints);
+
+        CampoNombreConcesionario1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        CampoNombreConcesionario1.setForeground(new java.awt.Color(204, 204, 204));
+        CampoNombreConcesionario1.setText("Nombre del concesionario...");
+        CampoNombreConcesionario1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CampoNombreConcesionario1ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridwidth = 5;
+        gridBagConstraints.ipadx = 565;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(22, 267, 0, 155);
+        MenuInicio.add(CampoNombreConcesionario1, gridBagConstraints);
+
+        EnviarInformacion.setFont(new java.awt.Font("sansserif", 0, 24)); // NOI18N
+        EnviarInformacion.setForeground(new java.awt.Color(255, 255, 255));
+        EnviarInformacion.setText("OK");
+        EnviarInformacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EnviarInformacionActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(36, 508, 58, 0);
+        MenuInicio.add(EnviarInformacion, gridBagConstraints);
+
+        MenuPrincipal.setBackground(new java.awt.Color(116, 149, 154));
+
+        Encabezado.setBackground(new java.awt.Color(73, 83, 113));
+
+        TituloNombreConce.setFont(new java.awt.Font("Bauhaus 93", 0, 48)); // NOI18N
+        TituloNombreConce.setForeground(new java.awt.Color(255, 255, 255));
+        TituloNombreConce.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TituloNombreConce.setText("Concesionario de");
+
+        TituloNombreGerente.setFont(new java.awt.Font("Bauhaus 93", 0, 36)); // NOI18N
+        TituloNombreGerente.setForeground(new java.awt.Color(255, 255, 255));
+        TituloNombreGerente.setText("Gerente: ");
+        TituloNombreGerente.setToolTipText("");
+
+        javax.swing.GroupLayout EncabezadoLayout = new javax.swing.GroupLayout(Encabezado);
+        Encabezado.setLayout(EncabezadoLayout);
+        EncabezadoLayout.setHorizontalGroup(
+            EncabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(EncabezadoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(EncabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(EncabezadoLayout.createSequentialGroup()
+                        .addComponent(TituloNombreGerente)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(TituloNombreConce, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        EncabezadoLayout.setVerticalGroup(
+            EncabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(EncabezadoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(TituloNombreConce)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addComponent(TituloNombreGerente)
+                .addContainerGap())
+        );
+
+        TablaInicio.setBackground(new java.awt.Color(241, 224, 172));
+        TablaInicio.setForeground(new java.awt.Color(241, 224, 172));
+
+        TablaInicioBienvenida.setBackground(new java.awt.Color(73, 83, 113));
+
+        BienvenidaInicio.setFont(new java.awt.Font("Bauhaus 93", 0, 62)); // NOI18N
+        BienvenidaInicio.setForeground(new java.awt.Color(255, 255, 255));
+        BienvenidaInicio.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BienvenidaInicio.setText("Bienvenido(a) al");
+
+        TituloNombreConce1.setFont(new java.awt.Font("Bauhaus 93", 0, 48)); // NOI18N
+        TituloNombreConce1.setForeground(new java.awt.Color(255, 255, 255));
+        TituloNombreConce1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TituloNombreConce1.setText("Concesionario de");
+
+        Sonrisa.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Sonrisa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/sonrisa.png"))); // NOI18N
+
+        javax.swing.GroupLayout TablaInicioBienvenidaLayout = new javax.swing.GroupLayout(TablaInicioBienvenida);
+        TablaInicioBienvenida.setLayout(TablaInicioBienvenidaLayout);
+        TablaInicioBienvenidaLayout.setHorizontalGroup(
+            TablaInicioBienvenidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(TablaInicioBienvenidaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(TablaInicioBienvenidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TablaInicioBienvenidaLayout.createSequentialGroup()
+                        .addGap(436, 436, 436)
+                        .addComponent(Sonrisa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(424, 424, 424))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TablaInicioBienvenidaLayout.createSequentialGroup()
+                        .addGroup(TablaInicioBienvenidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(BienvenidaInicio, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(TituloNombreConce1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap())))
+        );
+        TablaInicioBienvenidaLayout.setVerticalGroup(
+            TablaInicioBienvenidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(TablaInicioBienvenidaLayout.createSequentialGroup()
+                .addGap(84, 84, 84)
+                .addComponent(BienvenidaInicio)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Sonrisa)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(TituloNombreConce1)
+                .addContainerGap(268, Short.MAX_VALUE))
+        );
+
+        TablaBienvenida.addTab("Inicio", TablaInicioBienvenida);
+
+        TablaInicio.addTab("Inicio", TablaBienvenida);
+
+        TablaCarrosMenu.setBackground(new java.awt.Color(73, 83, 113));
+
+        CarroLogo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        CarroLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/AgregarCarro.png"))); // NOI18N
+
+        javax.swing.GroupLayout TablaCarrosMenuLayout = new javax.swing.GroupLayout(TablaCarrosMenu);
+        TablaCarrosMenu.setLayout(TablaCarrosMenuLayout);
+        TablaCarrosMenuLayout.setHorizontalGroup(
+            TablaCarrosMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TablaCarrosMenuLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(CarroLogo, javax.swing.GroupLayout.DEFAULT_SIZE, 982, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        TablaCarrosMenuLayout.setVerticalGroup(
+            TablaCarrosMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(TablaCarrosMenuLayout.createSequentialGroup()
+                .addComponent(CarroLogo)
+                .addGap(0, 532, Short.MAX_VALUE))
+        );
+
+        TablaCarros.addTab("Carros", TablaCarrosMenu);
+
+        TablaInicio.addTab("Carros", TablaCarros);
+        TablaInicio.addTab("Personal de ventas", TablaPersonalVentas);
+        TablaInicio.addTab("Ventas", TablaVentas);
+        TablaInicio.addTab("Configuración", TablaConfiguracion);
+
+        javax.swing.GroupLayout MenuPrincipalLayout = new javax.swing.GroupLayout(MenuPrincipal);
+        MenuPrincipal.setLayout(MenuPrincipalLayout);
+        MenuPrincipalLayout.setHorizontalGroup(
+            MenuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Encabezado, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(MenuPrincipalLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(TablaInicio)
+                .addContainerGap())
+        );
+        MenuPrincipalLayout.setVerticalGroup(
+            MenuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MenuPrincipalLayout.createSequentialGroup()
+                .addComponent(Encabezado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(TablaInicio)
+                .addGap(285, 285, 285))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jToolBar1.setBackground(new java.awt.Color(255, 251, 233));
@@ -340,82 +577,21 @@ public class Principal extends javax.swing.JFrame {
         escritorio.setBackground(new java.awt.Color(102, 102, 102));
         escritorio.setForeground(new java.awt.Color(0, 51, 255));
 
-        jPanelFondoInicio.setBackground(new java.awt.Color(53, 92, 125));
+        Contenedor.setLayout(new java.awt.BorderLayout());
 
-        jLabelNombreInicio.setFont(new java.awt.Font("Bauhaus 93", 0, 48)); // NOI18N
-        jLabelNombreInicio.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelNombreInicio.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelNombreInicio.setText("Nombre del concesionario");
-        jLabelNombreInicio.setToolTipText("");
-
-        nombreConce.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        nombreConce.setForeground(new java.awt.Color(204, 204, 204));
-        nombreConce.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        nombreConce.setText("Ingrese el nombre del concesionario...");
-        nombreConce.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nombreConceActionPerformed(evt);
-            }
-        });
-
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Rueda.png"))); // NOI18N
-
-        jButtonNombreConce.setText("OK");
-        jButtonNombreConce.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonNombreConceActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanelFondoInicioLayout = new javax.swing.GroupLayout(jPanelFondoInicio);
-        jPanelFondoInicio.setLayout(jPanelFondoInicioLayout);
-        jPanelFondoInicioLayout.setHorizontalGroup(
-            jPanelFondoInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelFondoInicioLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanelFondoInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelFondoInicioLayout.createSequentialGroup()
-                        .addComponent(jLabelNombreInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())
-                    .addGroup(jPanelFondoInicioLayout.createSequentialGroup()
-                        .addGap(358, 358, 358)
-                        .addComponent(nombreConce, javax.swing.GroupLayout.DEFAULT_SIZE, 469, Short.MAX_VALUE)
-                        .addGap(333, 333, 333))))
-            .addGroup(jPanelFondoInicioLayout.createSequentialGroup()
-                .addGap(525, 525, 525)
-                .addComponent(jButtonNombreConce, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(544, 544, 544))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelFondoInicioLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanelFondoInicioLayout.setVerticalGroup(
-            jPanelFondoInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelFondoInicioLayout.createSequentialGroup()
-                .addGap(88, 88, 88)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabelNombreInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(nombreConce)
-                .addGap(35, 35, 35)
-                .addComponent(jButtonNombreConce, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
-                .addGap(323, 323, 323))
-        );
-
-        escritorio.setLayer(jPanelFondoInicio, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        escritorio.setLayer(Contenedor, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout escritorioLayout = new javax.swing.GroupLayout(escritorio);
         escritorio.setLayout(escritorioLayout);
         escritorioLayout.setHorizontalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelFondoInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(Contenedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         escritorioLayout.setVerticalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelFondoInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(escritorioLayout.createSequentialGroup()
+                .addComponent(Contenedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         jMenu1.setText("Adicionar");
@@ -606,15 +782,28 @@ public class Principal extends javax.swing.JFrame {
         listarCarros();
     }//GEN-LAST:event_agregarButtonActionPerformed
 
-    private void jButtonNombreConceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNombreConceActionPerformed
-        nombreConce.requestFocus();
-        nombreConce.selectAll();
-        jPanelFondoInicio.setVisible(false);
-    }//GEN-LAST:event_jButtonNombreConceActionPerformed
+    private void EnviarInformacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnviarInformacionActionPerformed
+        String nombreConce = CampoNombreConcesionario1.getText();
+        concesionario.setNombreConsecionario(nombreConce);
+        TituloNombreConce.setText("Concesionario de " + concesionario.getNombreConsecionario());
+        TituloNombreConce1.setText("Concesionario de " + concesionario.getNombreConsecionario());
+        String nombreGerente = CampoNombreGerente.getText();
+        concesionario.setDueño(nombreGerente);
+        TituloNombreGerente.setText("Gerente: " + concesionario.getDueño());
+        
+        MenuInicio.setVisible(false);
+         Contenedor.add(MenuPrincipal);
+        MenuPrincipal.setVisible(true);
+        
+    }//GEN-LAST:event_EnviarInformacionActionPerformed
 
-    private void nombreConceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreConceActionPerformed
+    private void CampoNombreConcesionario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CampoNombreConcesionario1ActionPerformed
+        
+    }//GEN-LAST:event_CampoNombreConcesionario1ActionPerformed
 
-    }//GEN-LAST:event_nombreConceActionPerformed
+    private void CampoNombreGerenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CampoNombreGerenteActionPerformed
+       
+    }//GEN-LAST:event_CampoNombreGerenteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -654,7 +843,31 @@ public class Principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel AddCarroTitulo;
     private javax.swing.JFrame AddCarros;
+    private javax.swing.JLabel BienvenidaInicio;
+    private javax.swing.JTextField CampoNombreConcesionario1;
+    private javax.swing.JTextField CampoNombreGerente;
+    private javax.swing.JLabel CarroLogo;
+    private javax.swing.JPanel Contenedor;
+    private javax.swing.JPanel Encabezado;
+    private javax.swing.JButton EnviarInformacion;
+    private javax.swing.JLabel Gerente;
     private javax.swing.JLabel ImagenAddcarro;
+    private javax.swing.JPanel MenuInicio;
+    private javax.swing.JPanel MenuPrincipal;
+    private javax.swing.JLabel Rueda;
+    private javax.swing.JLabel Sonrisa;
+    private javax.swing.JTabbedPane TablaBienvenida;
+    private javax.swing.JTabbedPane TablaCarros;
+    private javax.swing.JPanel TablaCarrosMenu;
+    private javax.swing.JTabbedPane TablaConfiguracion;
+    private javax.swing.JTabbedPane TablaInicio;
+    private javax.swing.JPanel TablaInicioBienvenida;
+    private javax.swing.JTabbedPane TablaPersonalVentas;
+    private javax.swing.JTabbedPane TablaVentas;
+    private javax.swing.JLabel TituloConce;
+    private javax.swing.JLabel TituloNombreConce;
+    private javax.swing.JLabel TituloNombreConce1;
+    private javax.swing.JLabel TituloNombreGerente;
     private javax.swing.JButton agregarButton;
     private javax.swing.JButton atrasButton;
     private javax.swing.JTextField cantidadAutos;
@@ -666,8 +879,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButtonNombreConce;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -675,7 +886,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabelNombreInicio;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
@@ -688,12 +898,10 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuPersonal;
     private javax.swing.JMenuItem jMenuVentas;
-    private javax.swing.JPanel jPanelFondoInicio;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JToolBar.Separator jSeparator1;
     private javax.swing.JToolBar jToolBar1;
     private javax.swing.JFrame listarCarros;
-    private javax.swing.JTextField nombreConce;
     private javax.swing.JTable tablaDatos;
     private javax.swing.JTextField textCodigo;
     private javax.swing.JTextField textColor;
