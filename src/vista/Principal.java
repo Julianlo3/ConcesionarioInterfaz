@@ -130,7 +130,7 @@ public class Principal extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JToolBar.Separator();
-        jButton4 = new javax.swing.JButton();
+        BotonSalir = new javax.swing.JButton();
         escritorio = new javax.swing.JDesktopPane();
         Contenedor = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -694,7 +694,7 @@ public class Principal extends javax.swing.JFrame {
                         .addGap(27, 27, 27)
                         .addComponent(AgregarCarro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(48, 48, 48)
-                        .addComponent(ListarCarros, javax.swing.GroupLayout.PREFERRED_SIZE, 486, Short.MAX_VALUE)
+                        .addComponent(ListarCarros, javax.swing.GroupLayout.DEFAULT_SIZE, 486, Short.MAX_VALUE)
                         .addGap(124, 124, 124)
                         .addComponent(EliminarCarros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(65, 65, 65)))
@@ -1078,11 +1078,19 @@ public class Principal extends javax.swing.JFrame {
         jToolBar1.add(jButton3);
         jToolBar1.add(jSeparator1);
 
-        jButton4.setText("EXIT");
-        jButton4.setFocusable(false);
-        jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton4.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBar1.add(jButton4);
+        BotonSalir.setFont(new java.awt.Font("Bauhaus 93", 0, 12)); // NOI18N
+        BotonSalir.setForeground(java.awt.Color.red);
+        BotonSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Exit.png"))); // NOI18N
+        BotonSalir.setText("SALIR");
+        BotonSalir.setFocusable(false);
+        BotonSalir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        BotonSalir.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        BotonSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonSalirActionPerformed(evt);
+            }
+        });
+        jToolBar1.add(BotonSalir);
 
         escritorio.setBackground(new java.awt.Color(102, 102, 102));
         escritorio.setForeground(new java.awt.Color(0, 51, 255));
@@ -1175,7 +1183,7 @@ public class Principal extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(escritorio))
         );
@@ -1355,6 +1363,10 @@ public class Principal extends javax.swing.JFrame {
        
     }//GEN-LAST:event_BotonCambiarDatosActionPerformed
 
+    private void BotonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonSalirActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_BotonSalirActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1405,6 +1417,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton BotonEliminarCarro;
     private javax.swing.JButton BotonListarCarro;
     private javax.swing.JButton BotonListarPersonal;
+    private javax.swing.JButton BotonSalir;
     private javax.swing.JTextField CampoNombreConcesionario1;
     private javax.swing.JTextField CampoNombreGerente;
     private javax.swing.JTextField CampoNuevoConce;
@@ -1465,7 +1478,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
