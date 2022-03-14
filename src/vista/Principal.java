@@ -114,6 +114,13 @@ public class Principal extends javax.swing.JFrame {
         TituloAgregarVenta = new javax.swing.JLabel();
         BotonAgregarCompra = new javax.swing.JButton();
         TablaConfiguracion = new javax.swing.JTabbedPane();
+        Configuracion = new javax.swing.JPanel();
+        TituloConfiguracion = new javax.swing.JLabel();
+        TituloCambiarConce = new javax.swing.JLabel();
+        TituloCambiarGerente = new javax.swing.JLabel();
+        CampoNuevoConce = new javax.swing.JTextField();
+        CampoNuevoGerente = new javax.swing.JTextField();
+        BotonCambiarDatos = new javax.swing.JButton();
         jToolBar1 = new javax.swing.JToolBar();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -508,7 +515,7 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(Sonrisa)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(TituloNombreConce1)
-                .addContainerGap(1343, Short.MAX_VALUE))
+                .addContainerGap(1596, Short.MAX_VALUE))
         );
 
         TablaBienvenida.addTab("Inicio", TablaInicioBienvenida);
@@ -562,7 +569,7 @@ public class Principal extends javax.swing.JFrame {
                 .addGroup(AgregarCarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(BotonAgregarCarro)
                     .addComponent(LogoCarroAgregar))
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(293, Short.MAX_VALUE))
         );
 
         ListarCarros.setBackground(new java.awt.Color(255, 255, 204));
@@ -901,12 +908,89 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(jLabel9)
                 .addGap(45, 45, 45)
                 .addComponent(AgregarVenta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1126, Short.MAX_VALUE))
+                .addContainerGap(1379, Short.MAX_VALUE))
         );
 
         TablaVentas.addTab("Ventas", TablaVentasMenu);
 
         TablaInicio.addTab("Ventas", TablaVentas);
+
+        Configuracion.setBackground(new java.awt.Color(73, 83, 113));
+
+        TituloConfiguracion.setFont(new java.awt.Font("Bauhaus 93", 0, 48)); // NOI18N
+        TituloConfiguracion.setForeground(new java.awt.Color(255, 255, 255));
+        TituloConfiguracion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TituloConfiguracion.setText("Configuración");
+
+        TituloCambiarConce.setFont(new java.awt.Font("Bauhaus 93", 0, 24)); // NOI18N
+        TituloCambiarConce.setForeground(new java.awt.Color(255, 255, 255));
+        TituloCambiarConce.setText("Nuevo nombre del concesionario:");
+        TituloCambiarConce.setToolTipText("");
+
+        TituloCambiarGerente.setFont(new java.awt.Font("Bauhaus 93", 0, 24)); // NOI18N
+        TituloCambiarGerente.setForeground(new java.awt.Color(255, 255, 255));
+        TituloCambiarGerente.setText("Nuevo nombre del gerente:");
+
+        CampoNuevoConce.setFont(new java.awt.Font("Bauhaus 93", 0, 24)); // NOI18N
+        CampoNuevoConce.setForeground(new java.awt.Color(102, 102, 102));
+        CampoNuevoConce.setText("Nombre concesionario...");
+
+        CampoNuevoGerente.setFont(new java.awt.Font("Bauhaus 93", 0, 24)); // NOI18N
+        CampoNuevoGerente.setForeground(new java.awt.Color(102, 102, 102));
+        CampoNuevoGerente.setText("Nombre gerente...");
+
+        BotonCambiarDatos.setFont(new java.awt.Font("Bauhaus 93", 0, 48)); // NOI18N
+        BotonCambiarDatos.setForeground(new java.awt.Color(255, 255, 255));
+        BotonCambiarDatos.setText("OK");
+        BotonCambiarDatos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonCambiarDatosActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout ConfiguracionLayout = new javax.swing.GroupLayout(Configuracion);
+        Configuracion.setLayout(ConfiguracionLayout);
+        ConfiguracionLayout.setHorizontalGroup(
+            ConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ConfiguracionLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(TituloConfiguracion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(ConfiguracionLayout.createSequentialGroup()
+                .addGroup(ConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ConfiguracionLayout.createSequentialGroup()
+                        .addGap(74, 74, 74)
+                        .addGroup(ConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(TituloCambiarConce, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(TituloCambiarGerente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(ConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(CampoNuevoConce, javax.swing.GroupLayout.DEFAULT_SIZE, 310, Short.MAX_VALUE)
+                            .addComponent(CampoNuevoGerente)))
+                    .addGroup(ConfiguracionLayout.createSequentialGroup()
+                        .addGap(357, 357, 357)
+                        .addComponent(BotonCambiarDatos)))
+                .addGap(0, 1000, Short.MAX_VALUE))
+        );
+        ConfiguracionLayout.setVerticalGroup(
+            ConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ConfiguracionLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(TituloConfiguracion)
+                .addGap(39, 39, 39)
+                .addGroup(ConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(TituloCambiarConce)
+                    .addComponent(CampoNuevoConce, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(39, 39, 39)
+                .addGroup(ConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(TituloCambiarGerente)
+                    .addComponent(CampoNuevoGerente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(49, 49, 49)
+                .addComponent(BotonCambiarDatos)
+                .addContainerGap(1628, Short.MAX_VALUE))
+        );
+
+        TablaConfiguracion.addTab("Configuración", Configuracion);
+
         TablaInicio.addTab("Configuración", TablaConfiguracion);
 
         javax.swing.GroupLayout MenuPrincipalLayout = new javax.swing.GroupLayout(MenuPrincipal);
@@ -1219,6 +1303,17 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_BotonAgregarCompraActionPerformed
 
+    private void BotonCambiarDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCambiarDatosActionPerformed
+        String nombreConce = CampoNuevoConce.getText();
+        concesionario.setNombreConsecionario(nombreConce);
+        TituloNombreConce.setText("Concesionario de " + concesionario.getNombreConsecionario());
+        TituloNombreConce1.setText("Concesionario de " + concesionario.getNombreConsecionario());
+        String nombreGerente = CampoNuevoGerente.getText();
+        concesionario.setDueño(nombreGerente);
+        TituloNombreGerente.setText("Gerente: " + concesionario.getDueño());
+       mensajeAlerta("Datos cambiados exitosamente", "Cambiar datos");
+    }//GEN-LAST:event_BotonCambiarDatosActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1264,14 +1359,18 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton BotonAgregarCarro;
     private javax.swing.JButton BotonAgregarCompra;
     private javax.swing.JButton BotonAgregarPersonal;
+    private javax.swing.JButton BotonCambiarDatos;
     private javax.swing.JButton BotonElimianrPersonal;
     private javax.swing.JButton BotonEliminarCarro;
     private javax.swing.JButton BotonListarCarro;
     private javax.swing.JButton BotonListarPersonal;
     private javax.swing.JTextField CampoNombreConcesionario1;
     private javax.swing.JTextField CampoNombreGerente;
+    private javax.swing.JTextField CampoNuevoConce;
+    private javax.swing.JTextField CampoNuevoGerente;
     private javax.swing.JLabel CarroLista1;
     private javax.swing.JLabel CarroLista2;
+    private javax.swing.JPanel Configuracion;
     private javax.swing.JPanel Contenedor;
     private javax.swing.JPanel EliminarCarros;
     private javax.swing.JPanel EliminarPersonal;
@@ -1299,7 +1398,10 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel TituloAgregarCarros;
     private javax.swing.JLabel TituloAgregarPerso;
     private javax.swing.JLabel TituloAgregarVenta;
+    private javax.swing.JLabel TituloCambiarConce;
+    private javax.swing.JLabel TituloCambiarGerente;
     private javax.swing.JLabel TituloConce;
+    private javax.swing.JLabel TituloConfiguracion;
     private javax.swing.JLabel TituloEliminarPersonal;
     private javax.swing.JLabel TituloListarCarros;
     private javax.swing.JLabel TituloListarPersonal;
