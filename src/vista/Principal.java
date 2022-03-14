@@ -85,18 +85,15 @@ public class Principal extends javax.swing.JFrame {
         TablaCarros = new javax.swing.JTabbedPane();
         TablaCarrosMenu = new javax.swing.JPanel();
         TituloMenuCarros = new javax.swing.JLabel();
-        AgregarCarro = new javax.swing.JPanel();
-        TituloAgregarCarros = new javax.swing.JLabel();
-        BotonAgregarCarro = new javax.swing.JButton();
-        LogoCarroAgregar = new javax.swing.JLabel();
         ListarCarros = new javax.swing.JPanel();
         TituloListarCarros = new javax.swing.JLabel();
         BotonListarCarro = new javax.swing.JButton();
-        CarroLista1 = new javax.swing.JLabel();
-        CarroLista2 = new javax.swing.JLabel();
         EliminarCarros = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         BotonEliminarCarro = new javax.swing.JButton();
+        AgregarCarro = new javax.swing.JPanel();
+        TituloAgregarCarros = new javax.swing.JLabel();
+        BotonAgregarCarro = new javax.swing.JButton();
         TablaPersonalVentas = new javax.swing.JTabbedPane();
         TablaPersonalMenu = new javax.swing.JPanel();
         TituloPersonalVentas = new javax.swing.JLabel();
@@ -114,7 +111,7 @@ public class Principal extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         AgregarVenta = new javax.swing.JPanel();
         TituloAgregarVenta = new javax.swing.JLabel();
-        BotonAgregarCompra = new javax.swing.JButton();
+        BotonAgregarVenta = new javax.swing.JButton();
         TablaConfiguracion = new javax.swing.JTabbedPane();
         Configuracion = new javax.swing.JPanel();
         TituloConfiguracion = new javax.swing.JLabel();
@@ -439,6 +436,7 @@ public class Principal extends javax.swing.JFrame {
         MenuInicio.add(EnviarInformacion, gridBagConstraints);
 
         MenuPrincipal.setBackground(new java.awt.Color(116, 149, 154));
+        MenuPrincipal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Encabezado.setBackground(new java.awt.Color(73, 83, 113));
 
@@ -461,7 +459,7 @@ public class Principal extends javax.swing.JFrame {
         EncabezadoLayout.setHorizontalGroup(
             EncabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(EncabezadoLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(355, Short.MAX_VALUE)
                 .addComponent(ConcesionarioLogo)
                 .addGap(18, 18, 18)
                 .addComponent(TituloNombreConce, javax.swing.GroupLayout.PREFERRED_SIZE, 1255, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -489,6 +487,8 @@ public class Principal extends javax.swing.JFrame {
                 .addGap(103, 103, 103))
         );
 
+        MenuPrincipal.add(Encabezado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1762, 247));
+
         TablaInicio.setBackground(new java.awt.Color(241, 224, 172));
         TablaInicio.setForeground(new java.awt.Color(241, 224, 172));
 
@@ -513,27 +513,21 @@ public class Principal extends javax.swing.JFrame {
             TablaInicioBienvenidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TablaInicioBienvenidaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(TablaInicioBienvenidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TablaInicioBienvenidaLayout.createSequentialGroup()
-                        .addGap(436, 436, 436)
-                        .addComponent(Sonrisa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(424, 424, 424))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TablaInicioBienvenidaLayout.createSequentialGroup()
-                        .addGroup(TablaInicioBienvenidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(BienvenidaInicio, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(TituloNombreConce1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addContainerGap())))
+                .addGroup(TablaInicioBienvenidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(Sonrisa, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(BienvenidaInicio, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(TituloNombreConce1, javax.swing.GroupLayout.DEFAULT_SIZE, 1253, Short.MAX_VALUE))
+                .addGap(491, 491, 491))
         );
         TablaInicioBienvenidaLayout.setVerticalGroup(
             TablaInicioBienvenidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TablaInicioBienvenidaLayout.createSequentialGroup()
-                .addGap(84, 84, 84)
+                .addGap(15, 15, 15)
                 .addComponent(BienvenidaInicio)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(27, 27, 27)
                 .addComponent(Sonrisa)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(TituloNombreConce1)
-                .addContainerGap(1654, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(TituloNombreConce1))
         );
 
         TablaBienvenida.addTab("Inicio", TablaInicioBienvenida);
@@ -542,53 +536,10 @@ public class Principal extends javax.swing.JFrame {
 
         TablaCarrosMenu.setBackground(new java.awt.Color(73, 83, 113));
 
-        TituloMenuCarros.setFont(new java.awt.Font("Bauhaus 93", 0, 120)); // NOI18N
+        TituloMenuCarros.setFont(new java.awt.Font("Bauhaus 93", 0, 70)); // NOI18N
         TituloMenuCarros.setForeground(new java.awt.Color(255, 255, 255));
         TituloMenuCarros.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TituloMenuCarros.setText("Menu Carros");
-
-        AgregarCarro.setBackground(new java.awt.Color(204, 255, 204));
-
-        TituloAgregarCarros.setFont(new java.awt.Font("Bauhaus 93", 0, 48)); // NOI18N
-        TituloAgregarCarros.setForeground(new java.awt.Color(102, 102, 102));
-        TituloAgregarCarros.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TituloAgregarCarros.setText("Agregar Carros");
-
-        BotonAgregarCarro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/mas_1.png"))); // NOI18N
-        BotonAgregarCarro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonAgregarCarroActionPerformed(evt);
-            }
-        });
-
-        LogoCarroAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Carro_3.png"))); // NOI18N
-
-        javax.swing.GroupLayout AgregarCarroLayout = new javax.swing.GroupLayout(AgregarCarro);
-        AgregarCarro.setLayout(AgregarCarroLayout);
-        AgregarCarroLayout.setHorizontalGroup(
-            AgregarCarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AgregarCarroLayout.createSequentialGroup()
-                .addContainerGap(38, Short.MAX_VALUE)
-                .addComponent(LogoCarroAgregar)
-                .addGap(37, 37, 37)
-                .addComponent(BotonAgregarCarro)
-                .addGap(64, 64, 64))
-            .addGroup(AgregarCarroLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(TituloAgregarCarros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        AgregarCarroLayout.setVerticalGroup(
-            AgregarCarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AgregarCarroLayout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(TituloAgregarCarros)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(AgregarCarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(BotonAgregarCarro)
-                    .addComponent(LogoCarroAgregar))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
 
         ListarCarros.setBackground(new java.awt.Color(255, 255, 204));
 
@@ -604,44 +555,25 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        CarroLista1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        CarroLista1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/AgregarCarro.png"))); // NOI18N
-
-        CarroLista2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        CarroLista2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Carro_4.png"))); // NOI18N
-
         javax.swing.GroupLayout ListarCarrosLayout = new javax.swing.GroupLayout(ListarCarros);
         ListarCarros.setLayout(ListarCarrosLayout);
         ListarCarrosLayout.setHorizontalGroup(
             ListarCarrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ListarCarrosLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(TituloListarCarros)
-                .addGap(135, 135, 135))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ListarCarrosLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(CarroLista1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(CarroLista2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(BotonListarCarro)
-                .addGap(53, 53, 53))
+                .addGap(6, 6, 6)
+                .addComponent(TituloListarCarros, javax.swing.GroupLayout.PREFERRED_SIZE, 387, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(ListarCarrosLayout.createSequentialGroup()
+                .addGap(69, 69, 69)
+                .addComponent(BotonListarCarro))
         );
         ListarCarrosLayout.setVerticalGroup(
             ListarCarrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ListarCarrosLayout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addComponent(TituloListarCarros)
-                .addGroup(ListarCarrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(ListarCarrosLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(ListarCarrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(BotonListarCarro)
-                            .addComponent(CarroLista1)))
-                    .addGroup(ListarCarrosLayout.createSequentialGroup()
-                        .addGap(112, 112, 112)
-                        .addComponent(CarroLista2)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(BotonListarCarro)
+                .addContainerGap())
         );
 
         EliminarCarros.setBackground(new java.awt.Color(255, 102, 102));
@@ -651,7 +583,7 @@ public class Principal extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Eliminar Carros");
 
-        BotonEliminarCarro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/QuitarCarro.png"))); // NOI18N
+        BotonEliminarCarro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/EliminarCarro.png"))); // NOI18N
         BotonEliminarCarro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotonEliminarCarroActionPerformed(evt);
@@ -663,22 +595,58 @@ public class Principal extends javax.swing.JFrame {
         EliminarCarrosLayout.setHorizontalGroup(
             EliminarCarrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(EliminarCarrosLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 365, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EliminarCarrosLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(EliminarCarrosLayout.createSequentialGroup()
-                .addGap(87, 87, 87)
                 .addComponent(BotonEliminarCarro)
-                .addContainerGap(72, Short.MAX_VALUE))
+                .addGap(96, 96, 96))
         );
         EliminarCarrosLayout.setVerticalGroup(
             EliminarCarrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(EliminarCarrosLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(6, 6, 6)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(BotonEliminarCarro)
+                .addContainerGap())
+        );
+
+        AgregarCarro.setBackground(new java.awt.Color(204, 255, 204));
+
+        TituloAgregarCarros.setFont(new java.awt.Font("Bauhaus 93", 0, 48)); // NOI18N
+        TituloAgregarCarros.setForeground(new java.awt.Color(102, 102, 102));
+        TituloAgregarCarros.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TituloAgregarCarros.setText("Agregar Carros");
+
+        BotonAgregarCarro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/mas_1.png"))); // NOI18N
+        BotonAgregarCarro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonAgregarCarroActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout AgregarCarroLayout = new javax.swing.GroupLayout(AgregarCarro);
+        AgregarCarro.setLayout(AgregarCarroLayout);
+        AgregarCarroLayout.setHorizontalGroup(
+            AgregarCarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AgregarCarroLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(TituloAgregarCarros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(AgregarCarroLayout.createSequentialGroup()
+                .addGap(83, 83, 83)
+                .addComponent(BotonAgregarCarro)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        AgregarCarroLayout.setVerticalGroup(
+            AgregarCarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AgregarCarroLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(TituloAgregarCarros)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(BotonAgregarCarro)
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout TablaCarrosMenuLayout = new javax.swing.GroupLayout(TablaCarrosMenu);
@@ -686,31 +654,29 @@ public class Principal extends javax.swing.JFrame {
         TablaCarrosMenuLayout.setHorizontalGroup(
             TablaCarrosMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TablaCarrosMenuLayout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addComponent(AgregarCarro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(114, 114, 114)
                 .addGroup(TablaCarrosMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TablaCarrosMenuLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(TituloMenuCarros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(TablaCarrosMenuLayout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addComponent(AgregarCarro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(48, 48, 48)
-                        .addComponent(ListarCarros, javax.swing.GroupLayout.DEFAULT_SIZE, 486, Short.MAX_VALUE)
-                        .addGap(124, 124, 124)
-                        .addComponent(EliminarCarros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(65, 65, 65)))
-                .addContainerGap())
+                        .addComponent(ListarCarros, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(61, 61, 61)
+                        .addComponent(EliminarCarros, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(TablaCarrosMenuLayout.createSequentialGroup()
+                        .addComponent(TituloMenuCarros, javax.swing.GroupLayout.DEFAULT_SIZE, 687, Short.MAX_VALUE)
+                        .addGap(912, 912, 912))))
         );
         TablaCarrosMenuLayout.setVerticalGroup(
             TablaCarrosMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TablaCarrosMenuLayout.createSequentialGroup()
-                .addGap(48, 48, 48)
                 .addComponent(TituloMenuCarros)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(TablaCarrosMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(AgregarCarro, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AgregarCarro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ListarCarros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(EliminarCarros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(1503, Short.MAX_VALUE))
+                .addContainerGap(1798, Short.MAX_VALUE))
         );
 
         TablaCarros.addTab("Carros", TablaCarrosMenu);
@@ -719,51 +685,32 @@ public class Principal extends javax.swing.JFrame {
 
         TablaPersonalMenu.setBackground(new java.awt.Color(73, 83, 113));
 
-        TituloPersonalVentas.setFont(new java.awt.Font("Bauhaus 93", 0, 120)); // NOI18N
+        TituloPersonalVentas.setFont(new java.awt.Font("Bauhaus 93", 0, 70)); // NOI18N
         TituloPersonalVentas.setForeground(new java.awt.Color(255, 255, 255));
         TituloPersonalVentas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TituloPersonalVentas.setText("Personal de ventas");
 
         AgregarPersonal.setBackground(new java.awt.Color(204, 255, 204));
+        AgregarPersonal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         TituloAgregarPerso.setBackground(new java.awt.Color(102, 102, 102));
         TituloAgregarPerso.setFont(new java.awt.Font("Bauhaus 93", 0, 36)); // NOI18N
         TituloAgregarPerso.setForeground(new java.awt.Color(102, 102, 102));
         TituloAgregarPerso.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TituloAgregarPerso.setText("Agregar Personal de ventas");
+        AgregarPersonal.add(TituloAgregarPerso, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 6, 317, 40));
 
         BotonAgregarPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PersonalVenta_1.png"))); // NOI18N
-
-        javax.swing.GroupLayout AgregarPersonalLayout = new javax.swing.GroupLayout(AgregarPersonal);
-        AgregarPersonal.setLayout(AgregarPersonalLayout);
-        AgregarPersonalLayout.setHorizontalGroup(
-            AgregarPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AgregarPersonalLayout.createSequentialGroup()
-                .addGroup(AgregarPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(AgregarPersonalLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(TituloAgregarPerso, javax.swing.GroupLayout.PREFERRED_SIZE, 572, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(AgregarPersonalLayout.createSequentialGroup()
-                        .addGap(148, 148, 148)
-                        .addComponent(BotonAgregarPersonal)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        AgregarPersonalLayout.setVerticalGroup(
-            AgregarPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AgregarPersonalLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(TituloAgregarPerso)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BotonAgregarPersonal)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        AgregarPersonal.add(BotonAgregarPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, 226));
 
         ListarPersonal.setBackground(new java.awt.Color(255, 255, 204));
+        ListarPersonal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         TituloListarPersonal.setFont(new java.awt.Font("Bauhaus 93", 0, 36)); // NOI18N
         TituloListarPersonal.setForeground(new java.awt.Color(102, 102, 102));
         TituloListarPersonal.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TituloListarPersonal.setText("Listar personal de ventas");
+        ListarPersonal.add(TituloListarPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 397, -1));
 
         BotonListarPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/ListaPersonal.png"))); // NOI18N
         BotonListarPersonal.addActionListener(new java.awt.event.ActionListener() {
@@ -771,89 +718,46 @@ public class Principal extends javax.swing.JFrame {
                 BotonListarPersonalActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout ListarPersonalLayout = new javax.swing.GroupLayout(ListarPersonal);
-        ListarPersonal.setLayout(ListarPersonalLayout);
-        ListarPersonalLayout.setHorizontalGroup(
-            ListarPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ListarPersonalLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(TituloListarPersonal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(ListarPersonalLayout.createSequentialGroup()
-                .addGap(113, 113, 113)
-                .addComponent(BotonListarPersonal)
-                .addContainerGap(125, Short.MAX_VALUE))
-        );
-        ListarPersonalLayout.setVerticalGroup(
-            ListarPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ListarPersonalLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(TituloListarPersonal)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(BotonListarPersonal)
-                .addContainerGap(8, Short.MAX_VALUE))
-        );
+        ListarPersonal.add(BotonListarPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, -1, 224));
 
         EliminarPersonal.setBackground(new java.awt.Color(255, 102, 102));
+        EliminarPersonal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         TituloEliminarPersonal.setFont(new java.awt.Font("Bauhaus 93", 0, 36)); // NOI18N
         TituloEliminarPersonal.setForeground(new java.awt.Color(102, 102, 102));
         TituloEliminarPersonal.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TituloEliminarPersonal.setText("Eliminar Personal");
+        EliminarPersonal.add(TituloEliminarPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 6, 321, 48));
 
         BotonElimianrPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/PersonalVenta_2.png"))); // NOI18N
-
-        javax.swing.GroupLayout EliminarPersonalLayout = new javax.swing.GroupLayout(EliminarPersonal);
-        EliminarPersonal.setLayout(EliminarPersonalLayout);
-        EliminarPersonalLayout.setHorizontalGroup(
-            EliminarPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EliminarPersonalLayout.createSequentialGroup()
-                .addComponent(TituloEliminarPersonal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EliminarPersonalLayout.createSequentialGroup()
-                .addGap(0, 142, Short.MAX_VALUE)
-                .addComponent(BotonElimianrPersonal)
-                .addGap(115, 115, 115))
-        );
-        EliminarPersonalLayout.setVerticalGroup(
-            EliminarPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(EliminarPersonalLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(TituloEliminarPersonal)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BotonElimianrPersonal)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        EliminarPersonal.add(BotonElimianrPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 321, 228));
 
         javax.swing.GroupLayout TablaPersonalMenuLayout = new javax.swing.GroupLayout(TablaPersonalMenu);
         TablaPersonalMenu.setLayout(TablaPersonalMenuLayout);
         TablaPersonalMenuLayout.setHorizontalGroup(
             TablaPersonalMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TablaPersonalMenuLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(TituloPersonalVentas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(TablaPersonalMenuLayout.createSequentialGroup()
                 .addGap(33, 33, 33)
-                .addComponent(AgregarPersonal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(ListarPersonal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addComponent(EliminarPersonal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(40, 40, 40))
+                .addComponent(AgregarPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(57, 57, 57)
+                .addComponent(ListarPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48)
+                .addComponent(EliminarPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(TablaPersonalMenuLayout.createSequentialGroup()
+                .addComponent(TituloPersonalVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 1232, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 854, Short.MAX_VALUE))
         );
         TablaPersonalMenuLayout.setVerticalGroup(
             TablaPersonalMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TablaPersonalMenuLayout.createSequentialGroup()
-                .addGap(63, 63, 63)
-                .addComponent(TituloPersonalVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(TituloPersonalVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(TablaPersonalMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(ListarPersonal, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(AgregarPersonal, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(EliminarPersonal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(1532, Short.MAX_VALUE))
+                .addGroup(TablaPersonalMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(EliminarPersonal, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ListarPersonal, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AgregarPersonal, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(1803, Short.MAX_VALUE))
         );
 
         TablaPersonalVentas.addTab("Personal de ventas", TablaPersonalMenu);
@@ -869,62 +773,39 @@ public class Principal extends javax.swing.JFrame {
         jLabel9.setToolTipText("");
 
         AgregarVenta.setBackground(new java.awt.Color(204, 255, 204));
+        AgregarVenta.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         TituloAgregarVenta.setFont(new java.awt.Font("Bauhaus 93", 0, 48)); // NOI18N
         TituloAgregarVenta.setForeground(new java.awt.Color(102, 102, 102));
         TituloAgregarVenta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TituloAgregarVenta.setText("Agregar Venta");
+        AgregarVenta.add(TituloAgregarVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 376, -1));
 
-        BotonAgregarCompra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Venta_1.png"))); // NOI18N
-        BotonAgregarCompra.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonAgregarCompraActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout AgregarVentaLayout = new javax.swing.GroupLayout(AgregarVenta);
-        AgregarVenta.setLayout(AgregarVentaLayout);
-        AgregarVentaLayout.setHorizontalGroup(
-            AgregarVentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AgregarVentaLayout.createSequentialGroup()
-                .addGroup(AgregarVentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(AgregarVentaLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(TituloAgregarVenta, javax.swing.GroupLayout.PREFERRED_SIZE, 592, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(AgregarVentaLayout.createSequentialGroup()
-                        .addGap(170, 170, 170)
-                        .addComponent(BotonAgregarCompra)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        AgregarVentaLayout.setVerticalGroup(
-            AgregarVentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AgregarVentaLayout.createSequentialGroup()
-                .addComponent(TituloAgregarVenta)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(BotonAgregarCompra)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        BotonAgregarVenta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Venta_1.png"))); // NOI18N
+        AgregarVenta.add(BotonAgregarVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(143, 77, -1, -1));
 
         javax.swing.GroupLayout TablaVentasMenuLayout = new javax.swing.GroupLayout(TablaVentasMenu);
         TablaVentasMenu.setLayout(TablaVentasMenuLayout);
         TablaVentasMenuLayout.setHorizontalGroup(
             TablaVentasMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TablaVentasMenuLayout.createSequentialGroup()
-                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 1744, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TablaVentasMenuLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(AgregarVenta, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(561, 561, 561))
+                .addGroup(TablaVentasMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(TablaVentasMenuLayout.createSequentialGroup()
+                        .addGap(296, 296, 296)
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 536, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(TablaVentasMenuLayout.createSequentialGroup()
+                        .addGap(360, 360, 360)
+                        .addComponent(AgregarVenta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(1254, Short.MAX_VALUE))
         );
         TablaVentasMenuLayout.setVerticalGroup(
             TablaVentasMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TablaVentasMenuLayout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(jLabel9)
+                .addGap(13, 13, 13)
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(AgregarVenta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1531, Short.MAX_VALUE))
+                .addContainerGap(1809, Short.MAX_VALUE))
         );
 
         TablaVentas.addTab("Ventas", TablaVentasMenu);
@@ -977,34 +858,35 @@ public class Principal extends javax.swing.JFrame {
         ConfiguracionLayout.setHorizontalGroup(
             ConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ConfiguracionLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(TituloConfiguracion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(74, 74, 74)
+                .addGroup(ConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(TituloCambiarConce, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(TituloCambiarGerente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(TituloSeguirdadConfi))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(ConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(SeguridadConfi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(ConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(CampoNuevoConce, javax.swing.GroupLayout.DEFAULT_SIZE, 310, Short.MAX_VALUE)
+                        .addComponent(CampoNuevoGerente)))
+                .addGap(0, 1344, Short.MAX_VALUE))
             .addGroup(ConfiguracionLayout.createSequentialGroup()
                 .addGroup(ConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ConfiguracionLayout.createSequentialGroup()
-                        .addGap(362, 362, 362)
-                        .addComponent(BotonCambiarDatos))
+                        .addGap(120, 120, 120)
+                        .addComponent(TituloConfiguracion, javax.swing.GroupLayout.PREFERRED_SIZE, 728, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(ConfiguracionLayout.createSequentialGroup()
-                        .addGap(74, 74, 74)
-                        .addGroup(ConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(ConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(TituloCambiarConce, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(TituloCambiarGerente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(TituloSeguirdadConfi))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(ConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(SeguridadConfi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(ConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(CampoNuevoConce, javax.swing.GroupLayout.DEFAULT_SIZE, 310, Short.MAX_VALUE)
-                                .addComponent(CampoNuevoGerente)))))
-                .addGap(0, 1008, Short.MAX_VALUE))
+                        .addGap(415, 415, 415)
+                        .addComponent(BotonCambiarDatos)))
+                .addContainerGap(1238, Short.MAX_VALUE))
         );
         ConfiguracionLayout.setVerticalGroup(
             ConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ConfiguracionLayout.createSequentialGroup()
-                .addGap(27, 27, 27)
+                .addContainerGap()
                 .addComponent(TituloConfiguracion)
-                .addGap(39, 39, 39)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(ConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(TituloCambiarConce)
                     .addComponent(CampoNuevoConce, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1016,33 +898,16 @@ public class Principal extends javax.swing.JFrame {
                 .addGroup(ConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(SeguridadConfi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(TituloSeguirdadConfi))
-                .addGap(71, 71, 71)
-                .addComponent(BotonCambiarDatos)
-                .addContainerGap(1580, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(BotonCambiarDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(1784, Short.MAX_VALUE))
         );
 
         TablaConfiguracion.addTab("Configuración", Configuracion);
 
         TablaInicio.addTab("Configuración", TablaConfiguracion);
 
-        javax.swing.GroupLayout MenuPrincipalLayout = new javax.swing.GroupLayout(MenuPrincipal);
-        MenuPrincipal.setLayout(MenuPrincipalLayout);
-        MenuPrincipalLayout.setHorizontalGroup(
-            MenuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Encabezado, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(MenuPrincipalLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(TablaInicio)
-                .addContainerGap())
-        );
-        MenuPrincipalLayout.setVerticalGroup(
-            MenuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MenuPrincipalLayout.createSequentialGroup()
-                .addComponent(Encabezado, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(TablaInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 2150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
+        MenuPrincipal.add(TablaInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, -1));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -1331,17 +1196,9 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_BotonListarCarroActionPerformed
 
-    private void BotonEliminarCarroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonEliminarCarroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotonEliminarCarroActionPerformed
-
     private void BotonListarPersonalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonListarPersonalActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BotonListarPersonalActionPerformed
-
-    private void BotonAgregarCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAgregarCompraActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotonAgregarCompraActionPerformed
 
     private void BotonCambiarDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCambiarDatosActionPerformed
         if(String.valueOf(SeguridadConfi.getPassword()).compareTo("Nota5")==0){
@@ -1366,6 +1223,10 @@ public class Principal extends javax.swing.JFrame {
     private void BotonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonSalirActionPerformed
         System.exit(0);
     }//GEN-LAST:event_BotonSalirActionPerformed
+
+    private void BotonEliminarCarroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonEliminarCarroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BotonEliminarCarroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1410,8 +1271,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel AgregarVenta;
     private javax.swing.JLabel BienvenidaInicio;
     private javax.swing.JButton BotonAgregarCarro;
-    private javax.swing.JButton BotonAgregarCompra;
     private javax.swing.JButton BotonAgregarPersonal;
+    private javax.swing.JButton BotonAgregarVenta;
     private javax.swing.JButton BotonCambiarDatos;
     private javax.swing.JButton BotonElimianrPersonal;
     private javax.swing.JButton BotonEliminarCarro;
@@ -1422,8 +1283,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTextField CampoNombreGerente;
     private javax.swing.JTextField CampoNuevoConce;
     private javax.swing.JTextField CampoNuevoGerente;
-    private javax.swing.JLabel CarroLista1;
-    private javax.swing.JLabel CarroLista2;
     private javax.swing.JLabel ConcesionarioLogo;
     private javax.swing.JPanel Configuracion;
     private javax.swing.JPanel Contenedor;
@@ -1436,7 +1295,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel ImagenAddcarro;
     private javax.swing.JPanel ListarCarros;
     private javax.swing.JPanel ListarPersonal;
-    private javax.swing.JLabel LogoCarroAgregar;
     private javax.swing.JPanel MenuInicio;
     private javax.swing.JPanel MenuPrincipal;
     private javax.swing.JLabel Rueda;
