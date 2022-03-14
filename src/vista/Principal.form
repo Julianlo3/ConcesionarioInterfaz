@@ -424,8 +424,8 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Component id="Encabezado" alignment="1" max="32767" attributes="0"/>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="TablaInicio" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -434,10 +434,10 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="Encabezado" min="-2" max="-2" attributes="0"/>
+                  <Component id="Encabezado" min="-2" pref="247" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="TablaInicio" max="32767" attributes="0"/>
-                  <EmptySpace min="-2" pref="285" max="-2" attributes="0"/>
+                  <Component id="TablaInicio" min="-2" pref="2150" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -453,16 +453,19 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="ConcesionarioLogo" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="TituloNombreConce" min="-2" pref="1255" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="TituloNombreGerente" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                          <Component id="TituloNombreConce" max="32767" attributes="0"/>
-                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
+                      <Component id="GerenteLogo" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="TituloNombreGerente" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -470,10 +473,19 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="TituloNombreConce" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="27" max="32767" attributes="0"/>
-                      <Component id="TituloNombreGerente" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="ConcesionarioLogo" min="-2" max="-2" attributes="0"/>
+                          <Component id="TituloNombreConce" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="GerenteLogo" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="TituloNombreGerente" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -487,7 +499,6 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
-                <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="Concesionario de"/>
               </Properties>
             </Component>
@@ -501,6 +512,21 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gerente: "/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="ConcesionarioLogo">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/iconos/ConcesionarioLogo.png"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="GerenteLogo">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/iconos/Gerente.png"/>
+                </Property>
               </Properties>
             </Component>
           </SubComponents>
@@ -573,7 +599,7 @@
                               <Component id="Sonrisa" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="TituloNombreConce1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="1596" max="32767" attributes="0"/>
+                              <EmptySpace pref="1654" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -650,9 +676,10 @@
                                       <Component id="TituloMenuCarros" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                                       <Component id="AgregarCarro" max="32767" attributes="0"/>
-                                      <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
-                                      <Component id="ListarCarros" pref="484" max="32767" attributes="0"/>
+                                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                                      <Component id="ListarCarros" pref="486" max="32767" attributes="0"/>
                                       <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
                                       <Component id="EliminarCarros" max="32767" attributes="0"/>
                                       <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
@@ -668,12 +695,12 @@
                               <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                               <Component id="TituloMenuCarros" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="ListarCarros" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="EliminarCarros" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="AgregarCarro" alignment="0" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="AgregarCarro" min="-2" pref="357" max="-2" attributes="0"/>
+                                  <Component id="ListarCarros" max="32767" attributes="0"/>
+                                  <Component id="EliminarCarros" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace min="1143" pref="1143" max="-2" attributes="0"/>
+                              <EmptySpace pref="1503" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -702,7 +729,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="36" max="32767" attributes="0"/>
+                                  <EmptySpace pref="38" max="32767" attributes="0"/>
                                   <Component id="LogoCarroAgregar" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                                   <Component id="BotonAgregarCarro" min="-2" max="-2" attributes="0"/>
@@ -725,7 +752,7 @@
                                       <Component id="BotonAgregarCarro" min="-2" max="-2" attributes="0"/>
                                       <Component id="LogoCarroAgregar" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="293" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -870,7 +897,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
                                   <Component id="BotonEliminarCarro" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="68" max="32767" attributes="0"/>
+                                  <EmptySpace pref="72" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -902,7 +929,7 @@
                         <Component class="javax.swing.JButton" name="BotonEliminarCarro">
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/iconos/Prohibido.png"/>
+                              <Image iconType="3" name="/iconos/QuitarCarro.png"/>
                             </Property>
                           </Properties>
                           <Events>
@@ -949,13 +976,13 @@
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                               <Component id="AgregarPersonal" max="32767" attributes="0"/>
-                              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="ListarPersonal" max="32767" attributes="0"/>
-                              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="EliminarPersonal" max="32767" attributes="0"/>
-                              <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -965,17 +992,12 @@
                               <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                               <Component id="TituloPersonalVentas" min="-2" pref="141" max="-2" attributes="0"/>
                               <EmptySpace min="-2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="ListarPersonal" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="AgregarPersonal" alignment="0" max="32767" attributes="0"/>
                                   <Component id="EliminarPersonal" max="32767" attributes="0"/>
-                                  <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="AgregarPersonal" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="ListarPersonal" alignment="0" max="32767" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                                  </Group>
                               </Group>
-                              <EmptySpace min="-2" pref="1217" max="-2" attributes="0"/>
+                              <EmptySpace pref="1532" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1073,7 +1095,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
                                   <Component id="BotonListarPersonal" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="119" max="32767" attributes="0"/>
+                                  <EmptySpace pref="125" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1084,7 +1106,7 @@
                                   <Component id="TituloListarPersonal" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="BotonListarPersonal" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <EmptySpace pref="8" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1129,7 +1151,7 @@
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace min="0" pref="140" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="142" max="32767" attributes="0"/>
                                   <Component id="BotonElimianrPersonal" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="115" max="-2" attributes="0"/>
                               </Group>
@@ -1202,13 +1224,13 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel9" max="32767" attributes="0"/>
+                              <Component id="jLabel9" pref="1744" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="537" max="-2" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               <Component id="AgregarVenta" min="-2" pref="600" max="-2" attributes="0"/>
-                              <EmptySpace pref="605" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="561" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1217,9 +1239,9 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                               <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Component id="AgregarVenta" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="1379" max="32767" attributes="0"/>
+                              <EmptySpace pref="1531" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1269,7 +1291,7 @@
                                   <Component id="TituloAgregarVenta" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="BotonAgregarCompra" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="61" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1337,24 +1359,30 @@
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="TituloCambiarConce" max="32767" attributes="0"/>
-                                          <Component id="TituloCambiarGerente" max="32767" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="CampoNuevoConce" pref="310" max="32767" attributes="0"/>
-                                          <Component id="CampoNuevoGerente" max="32767" attributes="0"/>
-                                      </Group>
-                                  </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="357" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="362" max="-2" attributes="0"/>
                                       <Component id="BotonCambiarDatos" min="-2" max="-2" attributes="0"/>
                                   </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="TituloCambiarConce" max="32767" attributes="0"/>
+                                              <Component id="TituloCambiarGerente" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Component id="TituloSeguirdadConfi" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="SeguridadConfi" min="-2" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="CampoNuevoConce" pref="310" max="32767" attributes="0"/>
+                                              <Component id="CampoNuevoGerente" max="32767" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
                               </Group>
-                              <EmptySpace min="0" pref="1000" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="1008" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1373,9 +1401,14 @@
                                   <Component id="TituloCambiarGerente" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="CampoNuevoGerente" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="SeguridadConfi" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="TituloSeguirdadConfi" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
                               <Component id="BotonCambiarDatos" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="1628" max="32767" attributes="0"/>
+                              <EmptySpace pref="1580" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1451,6 +1484,28 @@
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonCambiarDatosActionPerformed"/>
                       </Events>
+                    </Component>
+                    <Component class="javax.swing.JPasswordField" name="SeguridadConfi">
+                      <Properties>
+                        <Property name="columns" type="int" value="15"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Bauhaus 93" size="24" style="0"/>
+                        </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="66" green="66" red="66" type="rgb"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="TituloSeguirdadConfi">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Bauhaus 93" size="24" style="0"/>
+                        </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Contrase&#xf1;a : ( Nota5)"/>
+                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>

@@ -74,6 +74,8 @@ public class Principal extends javax.swing.JFrame {
         Encabezado = new javax.swing.JPanel();
         TituloNombreConce = new javax.swing.JLabel();
         TituloNombreGerente = new javax.swing.JLabel();
+        ConcesionarioLogo = new javax.swing.JLabel();
+        GerenteLogo = new javax.swing.JLabel();
         TablaInicio = new javax.swing.JTabbedPane();
         TablaBienvenida = new javax.swing.JTabbedPane();
         TablaInicioBienvenida = new javax.swing.JPanel();
@@ -121,6 +123,8 @@ public class Principal extends javax.swing.JFrame {
         CampoNuevoConce = new javax.swing.JTextField();
         CampoNuevoGerente = new javax.swing.JTextField();
         BotonCambiarDatos = new javax.swing.JButton();
+        SeguridadConfi = new javax.swing.JPasswordField();
+        TituloSeguirdadConfi = new javax.swing.JLabel();
         jToolBar1 = new javax.swing.JToolBar();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -440,7 +444,6 @@ public class Principal extends javax.swing.JFrame {
 
         TituloNombreConce.setFont(new java.awt.Font("Bauhaus 93", 0, 48)); // NOI18N
         TituloNombreConce.setForeground(new java.awt.Color(255, 255, 255));
-        TituloNombreConce.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TituloNombreConce.setText("Concesionario de");
 
         TituloNombreGerente.setFont(new java.awt.Font("Bauhaus 93", 0, 36)); // NOI18N
@@ -448,27 +451,42 @@ public class Principal extends javax.swing.JFrame {
         TituloNombreGerente.setText("Gerente: ");
         TituloNombreGerente.setToolTipText("");
 
+        ConcesionarioLogo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ConcesionarioLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/ConcesionarioLogo.png"))); // NOI18N
+
+        GerenteLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Gerente.png"))); // NOI18N
+
         javax.swing.GroupLayout EncabezadoLayout = new javax.swing.GroupLayout(Encabezado);
         Encabezado.setLayout(EncabezadoLayout);
         EncabezadoLayout.setHorizontalGroup(
             EncabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(EncabezadoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(EncabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(EncabezadoLayout.createSequentialGroup()
-                        .addComponent(TituloNombreGerente)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(TituloNombreConce, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(ConcesionarioLogo)
+                .addGap(18, 18, 18)
+                .addComponent(TituloNombreConce, javax.swing.GroupLayout.PREFERRED_SIZE, 1255, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
+            .addGroup(EncabezadoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(GerenteLogo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(TituloNombreGerente)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         EncabezadoLayout.setVerticalGroup(
             EncabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(EncabezadoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(TituloNombreConce)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                .addComponent(TituloNombreGerente)
-                .addContainerGap())
+                .addGroup(EncabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(ConcesionarioLogo)
+                    .addComponent(TituloNombreConce))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(EncabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(GerenteLogo)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EncabezadoLayout.createSequentialGroup()
+                        .addComponent(TituloNombreGerente)
+                        .addGap(21, 21, 21)))
+                .addGap(103, 103, 103))
         );
 
         TablaInicio.setBackground(new java.awt.Color(241, 224, 172));
@@ -515,7 +533,7 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(Sonrisa)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(TituloNombreConce1)
-                .addContainerGap(1596, Short.MAX_VALUE))
+                .addContainerGap(1654, Short.MAX_VALUE))
         );
 
         TablaBienvenida.addTab("Inicio", TablaInicioBienvenida);
@@ -550,7 +568,7 @@ public class Principal extends javax.swing.JFrame {
         AgregarCarroLayout.setHorizontalGroup(
             AgregarCarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AgregarCarroLayout.createSequentialGroup()
-                .addContainerGap(36, Short.MAX_VALUE)
+                .addContainerGap(38, Short.MAX_VALUE)
                 .addComponent(LogoCarroAgregar)
                 .addGap(37, 37, 37)
                 .addComponent(BotonAgregarCarro)
@@ -569,7 +587,7 @@ public class Principal extends javax.swing.JFrame {
                 .addGroup(AgregarCarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(BotonAgregarCarro)
                     .addComponent(LogoCarroAgregar))
-                .addContainerGap(293, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         ListarCarros.setBackground(new java.awt.Color(255, 255, 204));
@@ -633,7 +651,7 @@ public class Principal extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Eliminar Carros");
 
-        BotonEliminarCarro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Prohibido.png"))); // NOI18N
+        BotonEliminarCarro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/QuitarCarro.png"))); // NOI18N
         BotonEliminarCarro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotonEliminarCarroActionPerformed(evt);
@@ -651,7 +669,7 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(EliminarCarrosLayout.createSequentialGroup()
                 .addGap(87, 87, 87)
                 .addComponent(BotonEliminarCarro)
-                .addContainerGap(68, Short.MAX_VALUE))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
         EliminarCarrosLayout.setVerticalGroup(
             EliminarCarrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -673,9 +691,10 @@ public class Principal extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(TituloMenuCarros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(TablaCarrosMenuLayout.createSequentialGroup()
+                        .addGap(27, 27, 27)
                         .addComponent(AgregarCarro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(75, 75, 75)
-                        .addComponent(ListarCarros, javax.swing.GroupLayout.PREFERRED_SIZE, 484, Short.MAX_VALUE)
+                        .addGap(48, 48, 48)
+                        .addComponent(ListarCarros, javax.swing.GroupLayout.PREFERRED_SIZE, 486, Short.MAX_VALUE)
                         .addGap(124, 124, 124)
                         .addComponent(EliminarCarros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(65, 65, 65)))
@@ -687,11 +706,11 @@ public class Principal extends javax.swing.JFrame {
                 .addGap(48, 48, 48)
                 .addComponent(TituloMenuCarros)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(TablaCarrosMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(TablaCarrosMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(AgregarCarro, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ListarCarros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(EliminarCarros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(AgregarCarro, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(1143, 1143, 1143))
+                    .addComponent(EliminarCarros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(1503, Short.MAX_VALUE))
         );
 
         TablaCarros.addTab("Carros", TablaCarrosMenu);
@@ -764,7 +783,7 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(ListarPersonalLayout.createSequentialGroup()
                 .addGap(113, 113, 113)
                 .addComponent(BotonListarPersonal)
-                .addContainerGap(119, Short.MAX_VALUE))
+                .addContainerGap(125, Short.MAX_VALUE))
         );
         ListarPersonalLayout.setVerticalGroup(
             ListarPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -773,7 +792,7 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(TituloListarPersonal)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(BotonListarPersonal)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(8, Short.MAX_VALUE))
         );
 
         EliminarPersonal.setBackground(new java.awt.Color(255, 102, 102));
@@ -793,7 +812,7 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(TituloEliminarPersonal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EliminarPersonalLayout.createSequentialGroup()
-                .addGap(0, 140, Short.MAX_VALUE)
+                .addGap(0, 142, Short.MAX_VALUE)
                 .addComponent(BotonElimianrPersonal)
                 .addGap(115, 115, 115))
         );
@@ -816,13 +835,13 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(TituloPersonalVentas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(TablaPersonalMenuLayout.createSequentialGroup()
-                .addGap(12, 12, 12)
+                .addGap(33, 33, 33)
                 .addComponent(AgregarPersonal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(ListarPersonal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(EliminarPersonal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(55, 55, 55))
+                .addGap(40, 40, 40))
         );
         TablaPersonalMenuLayout.setVerticalGroup(
             TablaPersonalMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -830,14 +849,11 @@ public class Principal extends javax.swing.JFrame {
                 .addGap(63, 63, 63)
                 .addComponent(TituloPersonalVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(TablaPersonalMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(EliminarPersonal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(TablaPersonalMenuLayout.createSequentialGroup()
-                        .addGroup(TablaPersonalMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(AgregarPersonal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(ListarPersonal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(6, 6, 6)))
-                .addGap(1217, 1217, 1217))
+                .addGroup(TablaPersonalMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(ListarPersonal, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(AgregarPersonal, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(EliminarPersonal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(1532, Short.MAX_VALUE))
         );
 
         TablaPersonalVentas.addTab("Personal de ventas", TablaPersonalMenu);
@@ -886,7 +902,7 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(TituloAgregarVenta)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(BotonAgregarCompra)
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout TablaVentasMenuLayout = new javax.swing.GroupLayout(TablaVentasMenu);
@@ -894,21 +910,21 @@ public class Principal extends javax.swing.JFrame {
         TablaVentasMenuLayout.setHorizontalGroup(
             TablaVentasMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TablaVentasMenuLayout.createSequentialGroup()
-                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 1744, Short.MAX_VALUE)
                 .addContainerGap())
-            .addGroup(TablaVentasMenuLayout.createSequentialGroup()
-                .addGap(537, 537, 537)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TablaVentasMenuLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(AgregarVenta, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(605, Short.MAX_VALUE))
+                .addGap(561, 561, 561))
         );
         TablaVentasMenuLayout.setVerticalGroup(
             TablaVentasMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TablaVentasMenuLayout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addComponent(jLabel9)
-                .addGap(45, 45, 45)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(AgregarVenta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1379, Short.MAX_VALUE))
+                .addContainerGap(1531, Short.MAX_VALUE))
         );
 
         TablaVentas.addTab("Ventas", TablaVentasMenu);
@@ -948,6 +964,14 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        SeguridadConfi.setColumns(15);
+        SeguridadConfi.setFont(new java.awt.Font("Bauhaus 93", 0, 24)); // NOI18N
+        SeguridadConfi.setForeground(new java.awt.Color(102, 102, 102));
+
+        TituloSeguirdadConfi.setFont(new java.awt.Font("Bauhaus 93", 0, 24)); // NOI18N
+        TituloSeguirdadConfi.setForeground(new java.awt.Color(255, 255, 255));
+        TituloSeguirdadConfi.setText("Contraseña : ( Nota5)");
+
         javax.swing.GroupLayout ConfiguracionLayout = new javax.swing.GroupLayout(Configuracion);
         Configuracion.setLayout(ConfiguracionLayout);
         ConfiguracionLayout.setHorizontalGroup(
@@ -958,18 +982,22 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(ConfiguracionLayout.createSequentialGroup()
                 .addGroup(ConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ConfiguracionLayout.createSequentialGroup()
-                        .addGap(74, 74, 74)
-                        .addGroup(ConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(TituloCambiarConce, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(TituloCambiarGerente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(ConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(CampoNuevoConce, javax.swing.GroupLayout.DEFAULT_SIZE, 310, Short.MAX_VALUE)
-                            .addComponent(CampoNuevoGerente)))
+                        .addGap(362, 362, 362)
+                        .addComponent(BotonCambiarDatos))
                     .addGroup(ConfiguracionLayout.createSequentialGroup()
-                        .addGap(357, 357, 357)
-                        .addComponent(BotonCambiarDatos)))
-                .addGap(0, 1000, Short.MAX_VALUE))
+                        .addGap(74, 74, 74)
+                        .addGroup(ConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(ConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(TituloCambiarConce, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(TituloCambiarGerente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(TituloSeguirdadConfi))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(ConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(SeguridadConfi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(ConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(CampoNuevoConce, javax.swing.GroupLayout.DEFAULT_SIZE, 310, Short.MAX_VALUE)
+                                .addComponent(CampoNuevoGerente)))))
+                .addGap(0, 1008, Short.MAX_VALUE))
         );
         ConfiguracionLayout.setVerticalGroup(
             ConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -984,9 +1012,13 @@ public class Principal extends javax.swing.JFrame {
                 .addGroup(ConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(TituloCambiarGerente)
                     .addComponent(CampoNuevoGerente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(49, 49, 49)
+                .addGap(36, 36, 36)
+                .addGroup(ConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(SeguridadConfi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TituloSeguirdadConfi))
+                .addGap(71, 71, 71)
                 .addComponent(BotonCambiarDatos)
-                .addContainerGap(1628, Short.MAX_VALUE))
+                .addContainerGap(1580, Short.MAX_VALUE))
         );
 
         TablaConfiguracion.addTab("Configuración", Configuracion);
@@ -999,17 +1031,17 @@ public class Principal extends javax.swing.JFrame {
             MenuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(Encabezado, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(MenuPrincipalLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
+                .addContainerGap()
                 .addComponent(TablaInicio)
                 .addContainerGap())
         );
         MenuPrincipalLayout.setVerticalGroup(
             MenuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MenuPrincipalLayout.createSequentialGroup()
-                .addComponent(Encabezado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Encabezado, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(TablaInicio)
-                .addGap(285, 285, 285))
+                .addComponent(TablaInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 2150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -1304,6 +1336,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonAgregarCompraActionPerformed
 
     private void BotonCambiarDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCambiarDatosActionPerformed
+        if(String.valueOf(SeguridadConfi.getPassword()).compareTo("Nota5")==0){
         String nombreConce = CampoNuevoConce.getText();
         concesionario.setNombreConsecionario(nombreConce);
         TituloNombreConce.setText("Concesionario de " + concesionario.getNombreConsecionario());
@@ -1312,6 +1345,14 @@ public class Principal extends javax.swing.JFrame {
         concesionario.setDueño(nombreGerente);
         TituloNombreGerente.setText("Gerente: " + concesionario.getDueño());
        mensajeAlerta("Datos cambiados exitosamente", "Cambiar datos");
+        }
+        else{
+            mensajeAlerta("Contraseña Incorrecta. Datos no cambiados", "Cambiar datos");
+        }
+        
+        
+        
+       
     }//GEN-LAST:event_BotonCambiarDatosActionPerformed
 
     /**
@@ -1370,6 +1411,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTextField CampoNuevoGerente;
     private javax.swing.JLabel CarroLista1;
     private javax.swing.JLabel CarroLista2;
+    private javax.swing.JLabel ConcesionarioLogo;
     private javax.swing.JPanel Configuracion;
     private javax.swing.JPanel Contenedor;
     private javax.swing.JPanel EliminarCarros;
@@ -1377,6 +1419,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel Encabezado;
     private javax.swing.JButton EnviarInformacion;
     private javax.swing.JLabel Gerente;
+    private javax.swing.JLabel GerenteLogo;
     private javax.swing.JLabel ImagenAddcarro;
     private javax.swing.JPanel ListarCarros;
     private javax.swing.JPanel ListarPersonal;
@@ -1384,6 +1427,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel MenuInicio;
     private javax.swing.JPanel MenuPrincipal;
     private javax.swing.JLabel Rueda;
+    private javax.swing.JPasswordField SeguridadConfi;
     private javax.swing.JLabel Sonrisa;
     private javax.swing.JTabbedPane TablaBienvenida;
     private javax.swing.JTabbedPane TablaCarros;
@@ -1410,6 +1454,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel TituloNombreConce1;
     private javax.swing.JLabel TituloNombreGerente;
     private javax.swing.JLabel TituloPersonalVentas;
+    private javax.swing.JLabel TituloSeguirdadConfi;
     private javax.swing.JButton agregarButton;
     private javax.swing.JButton atrasButton;
     private javax.swing.JTextField cantidadAutos;
